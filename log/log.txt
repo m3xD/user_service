@@ -1,0 +1,102 @@
+{"level":"INFO","ts":"2025-02-22T18:49:23.430+0700","caller":"cmd/main.go:30","msg":"User service starting","version":"1.0.0"}
+{"level":"ERROR","ts":"2025-02-22T18:49:23.446+0700","caller":"cmd/main.go:45","msg":"Failed to ping database","error":"pq: password authentication failed for user \"postgres\""}
+{"level":"INFO","ts":"2025-02-22T18:49:37.291+0700","caller":"cmd/main.go:30","msg":"User service starting","version":"1.0.0"}
+{"level":"INFO","ts":"2025-02-22T18:49:37.324+0700","caller":"cmd/main.go:48","msg":"Successfully connected to database","host":"localhost","port":"5432"}
+{"level":"INFO","ts":"2025-02-22T18:49:37.324+0700","caller":"cmd/main.go:68","msg":"Server starting","port":"8080"}
+{"level":"INFO","ts":"2025-02-23T00:00:13.534+0700","caller":"cmd/main.go:30","msg":"User service starting","version":"1.0.0"}
+{"level":"INFO","ts":"2025-02-23T00:00:13.576+0700","caller":"cmd/main.go:48","msg":"Successfully connected to database","host":"localhost","port":"5432"}
+{"level":"INFO","ts":"2025-02-23T00:00:13.576+0700","caller":"cmd/main.go:68","msg":"Server starting","port":"8080"}
+{"level":"INFO","ts":"2025-02-23T01:14:00.806+0700","caller":"middleware/log.go:24","msg":"Started POST /users from [::1]:62380"}
+{"level":"ERROR","ts":"2025-02-23T01:14:00.897+0700","caller":"service/user.go:65","msg":"[Service][Create] failed to create user","error":"pq: there is no parameter $1"}
+{"level":"ERROR","ts":"2025-02-23T01:14:00.897+0700","caller":"rest/handler.go:59","msg":"[Handler][CreateUser] failed to create user","error":"failed to create user"}
+{"level":"INFO","ts":"2025-02-23T01:14:00.898+0700","caller":"middleware/log.go:31","msg":"Completed /users in 91.8118ms"}
+{"level":"INFO","ts":"2025-02-23T01:16:20.096+0700","caller":"cmd/main.go:30","msg":"User service starting","version":"1.0.0"}
+{"level":"INFO","ts":"2025-02-23T01:16:20.116+0700","caller":"cmd/main.go:48","msg":"Successfully connected to database","host":"localhost","port":"5432"}
+{"level":"INFO","ts":"2025-02-23T01:16:20.116+0700","caller":"cmd/main.go:68","msg":"Server starting","port":"8080"}
+{"level":"INFO","ts":"2025-02-23T01:16:26.247+0700","caller":"middleware/log.go:24","msg":"Started POST /users from [::1]:62480"}
+{"level":"ERROR","ts":"2025-02-23T01:16:26.310+0700","caller":"service/user.go:66","msg":"[Service][Create] failed to create user","error":"pq: there is no parameter $1"}
+{"level":"ERROR","ts":"2025-02-23T01:16:26.310+0700","caller":"rest/handler.go:59","msg":"[Handler][CreateUser] failed to create user","error":"failed to create user"}
+{"level":"INFO","ts":"2025-02-23T01:16:26.310+0700","caller":"middleware/log.go:31","msg":"Completed /users in 62.4669ms"}
+{"level":"INFO","ts":"2025-02-23T01:18:27.827+0700","caller":"cmd/main.go:30","msg":"User service starting","version":"1.0.0"}
+{"level":"INFO","ts":"2025-02-23T01:18:27.875+0700","caller":"cmd/main.go:48","msg":"Successfully connected to database","host":"localhost","port":"5432"}
+{"level":"INFO","ts":"2025-02-23T01:18:27.875+0700","caller":"cmd/main.go:68","msg":"Server starting","port":"8080"}
+{"level":"INFO","ts":"2025-02-23T01:18:32.401+0700","caller":"middleware/log.go:24","msg":"Started POST /users from [::1]:62543"}
+{"level":"ERROR","ts":"2025-02-23T01:19:07.602+0700","caller":"service/user.go:66","msg":"[Service][Create] failed to create user","error":"pq: there is no parameter $1"}
+{"level":"ERROR","ts":"2025-02-23T01:19:07.602+0700","caller":"rest/handler.go:59","msg":"[Handler][CreateUser] failed to create user","error":"failed to create user"}
+{"level":"INFO","ts":"2025-02-23T01:19:07.603+0700","caller":"middleware/log.go:31","msg":"Completed /users in 35.2018849s"}
+{"level":"INFO","ts":"2025-02-23T01:22:14.254+0700","caller":"cmd/main.go:30","msg":"User service starting","version":"1.0.0"}
+{"level":"INFO","ts":"2025-02-23T01:22:14.272+0700","caller":"cmd/main.go:48","msg":"Successfully connected to database","host":"localhost","port":"5432"}
+{"level":"INFO","ts":"2025-02-23T01:22:14.272+0700","caller":"cmd/main.go:68","msg":"Server starting","port":"8080"}
+{"level":"INFO","ts":"2025-02-23T01:22:16.474+0700","caller":"middleware/log.go:24","msg":"Started POST /users from [::1]:62742"}
+{"level":"ERROR","ts":"2025-02-23T01:22:16.537+0700","caller":"service/user.go:66","msg":"[Service][Create] failed to create user","error":"pq: there is no parameter $1"}
+{"level":"ERROR","ts":"2025-02-23T01:22:16.537+0700","caller":"rest/handler.go:59","msg":"[Handler][CreateUser] failed to create user","error":"failed to create user"}
+{"level":"INFO","ts":"2025-02-23T01:22:16.537+0700","caller":"middleware/log.go:31","msg":"Completed /users in 63.1854ms"}
+{"level":"INFO","ts":"2025-02-23T01:22:26.131+0700","caller":"cmd/main.go:30","msg":"User service starting","version":"1.0.0"}
+{"level":"INFO","ts":"2025-02-23T01:22:26.148+0700","caller":"cmd/main.go:48","msg":"Successfully connected to database","host":"localhost","port":"5432"}
+{"level":"INFO","ts":"2025-02-23T01:22:26.148+0700","caller":"cmd/main.go:68","msg":"Server starting","port":"8080"}
+{"level":"INFO","ts":"2025-02-23T01:22:28.843+0700","caller":"middleware/log.go:24","msg":"Started POST /users from [::1]:62759"}
+{"level":"ERROR","ts":"2025-02-23T01:22:28.905+0700","caller":"service/user.go:66","msg":"[Service][Create] failed to create user","error":"pq: there is no parameter $1"}
+{"level":"ERROR","ts":"2025-02-23T01:22:28.905+0700","caller":"rest/handler.go:59","msg":"[Handler][CreateUser] failed to create user","error":"failed to create user"}
+{"level":"INFO","ts":"2025-02-23T01:22:28.905+0700","caller":"middleware/log.go:31","msg":"Completed /users in 61.2742ms"}
+{"level":"INFO","ts":"2025-02-23T01:24:07.985+0700","caller":"cmd/main.go:30","msg":"User service starting","version":"1.0.0"}
+{"level":"INFO","ts":"2025-02-23T01:24:08.002+0700","caller":"cmd/main.go:48","msg":"Successfully connected to database","host":"localhost","port":"5432"}
+{"level":"INFO","ts":"2025-02-23T01:24:08.002+0700","caller":"cmd/main.go:68","msg":"Server starting","port":"8080"}
+{"level":"INFO","ts":"2025-02-23T01:24:10.376+0700","caller":"middleware/log.go:24","msg":"Started POST /users from [::1]:62833"}
+{"level":"INFO","ts":"2025-02-23T01:24:10.442+0700","caller":"middleware/log.go:31","msg":"Completed /users in 66.0367ms"}
+{"level":"INFO","ts":"2025-02-23T01:24:40.430+0700","caller":"middleware/log.go:24","msg":"Started GET /users/5b8a0adf-def6-4e53-8db5-d53165d0ad2a from [::1]:62833"}
+{"level":"INFO","ts":"2025-02-23T01:24:40.433+0700","caller":"middleware/log.go:31","msg":"Completed /users/5b8a0adf-def6-4e53-8db5-d53165d0ad2a in 2.5859ms"}
+{"level":"INFO","ts":"2025-02-23T01:26:47.044+0700","caller":"middleware/log.go:24","msg":"Started PUT /users/5b8a0adf-def6-4e53-8db5-d53165d0ad2a from [::1]:62926"}
+{"level":"ERROR","ts":"2025-02-23T01:26:47.048+0700","caller":"service/user.go:103","msg":"[Service][Update] failed to update user","error":"pq: there is no parameter $6"}
+{"level":"ERROR","ts":"2025-02-23T01:26:47.048+0700","caller":"rest/handler.go:110","msg":"[Handler][UpdateUser] failed to update user","error":"failed to update user"}
+{"level":"INFO","ts":"2025-02-23T01:26:47.048+0700","caller":"middleware/log.go:31","msg":"Completed /users/5b8a0adf-def6-4e53-8db5-d53165d0ad2a in 4.0927ms"}
+{"level":"INFO","ts":"2025-02-23T01:28:19.535+0700","caller":"cmd/main.go:30","msg":"User service starting","version":"1.0.0"}
+{"level":"INFO","ts":"2025-02-23T01:28:19.552+0700","caller":"cmd/main.go:48","msg":"Successfully connected to database","host":"localhost","port":"5432"}
+{"level":"INFO","ts":"2025-02-23T01:28:19.552+0700","caller":"cmd/main.go:68","msg":"Server starting","port":"8080"}
+{"level":"INFO","ts":"2025-02-23T01:28:21.797+0700","caller":"middleware/log.go:24","msg":"Started PUT /users/5b8a0adf-def6-4e53-8db5-d53165d0ad2a from [::1]:63008"}
+{"level":"INFO","ts":"2025-02-23T01:28:21.806+0700","caller":"middleware/log.go:31","msg":"Completed /users/5b8a0adf-def6-4e53-8db5-d53165d0ad2a in 8.8655ms"}
+{"level":"INFO","ts":"2025-02-23T01:28:57.561+0700","caller":"middleware/log.go:24","msg":"Started GET /users from [::1]:63008"}
+{"level":"ERROR","ts":"2025-02-23T01:28:57.568+0700","caller":"service/user.go:122","msg":"[Service][List] failed to list users","error":"pq: OFFSET must not be negative"}
+{"level":"ERROR","ts":"2025-02-23T01:28:57.568+0700","caller":"rest/handler.go:148","msg":"[Handler][ListUsers] failed to list users","error":"failed to list users"}
+{"level":"INFO","ts":"2025-02-23T01:28:57.568+0700","caller":"middleware/log.go:31","msg":"Completed /users in 6.8775ms"}
+{"level":"INFO","ts":"2025-02-23T01:32:40.891+0700","caller":"cmd/main.go:30","msg":"User service starting","version":"1.0.0"}
+{"level":"INFO","ts":"2025-02-23T01:32:40.907+0700","caller":"cmd/main.go:48","msg":"Successfully connected to database","host":"localhost","port":"5432"}
+{"level":"INFO","ts":"2025-02-23T01:32:40.908+0700","caller":"cmd/main.go:68","msg":"Server starting","port":"8080"}
+{"level":"INFO","ts":"2025-02-23T01:32:52.698+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=1&pageSize=10 from [::1]:63165"}
+{"level":"ERROR","ts":"2025-02-23T01:32:52.698+0700","caller":"rest/handler.go:149","msg":"[Handler][ListUsers] invalid query params","error":"strconv.Atoi: parsing \"\": invalid syntax"}
+{"level":"INFO","ts":"2025-02-23T01:32:52.699+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=1&pageSize=10 in 572.7µs"}
+{"level":"INFO","ts":"2025-02-23T01:33:30.175+0700","caller":"cmd/main.go:30","msg":"User service starting","version":"1.0.0"}
+{"level":"INFO","ts":"2025-02-23T01:33:30.193+0700","caller":"cmd/main.go:48","msg":"Successfully connected to database","host":"localhost","port":"5432"}
+{"level":"INFO","ts":"2025-02-23T01:33:30.193+0700","caller":"cmd/main.go:68","msg":"Server starting","port":"8080"}
+{"level":"INFO","ts":"2025-02-23T01:33:32.839+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=1&pageSize=10 from [::1]:63187"}
+{"level":"INFO","ts":"2025-02-23T01:33:32.843+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=1&pageSize=10 in 3.7882ms"}
+{"level":"INFO","ts":"2025-02-23T01:34:28.472+0700","caller":"middleware/log.go:24","msg":"Started POST /users/validate from [::1]:63187"}
+{"level":"INFO","ts":"2025-02-23T01:34:28.532+0700","caller":"middleware/log.go:31","msg":"Completed /users/validate in 59.2545ms"}
+{"level":"INFO","ts":"2025-02-23T01:34:40.752+0700","caller":"middleware/log.go:24","msg":"Started POST /users/validate from [::1]:63187"}
+{"level":"ERROR","ts":"2025-02-23T01:34:40.812+0700","caller":"service/user.go:137","msg":"[Service][Validate] invalid password","error":"crypto/bcrypt: hashedPassword is not the hash of the given password"}
+{"level":"ERROR","ts":"2025-02-23T01:34:40.813+0700","caller":"rest/handler.go:212","msg":"[Handler][ValidateUser] failed to validate user","error":"user not found"}
+{"level":"INFO","ts":"2025-02-23T01:34:40.813+0700","caller":"middleware/log.go:31","msg":"Completed /users/validate in 60.845ms"}
+{"level":"INFO","ts":"2025-02-23T01:35:22.584+0700","caller":"middleware/log.go:24","msg":"Started DELETE /users/5b8a0adf-def6-4e53-8db5-d53165d0ad2a from [::1]:63187"}
+{"level":"INFO","ts":"2025-02-23T01:36:28.830+0700","caller":"cmd/main.go:30","msg":"User service starting","version":"1.0.0"}
+{"level":"INFO","ts":"2025-02-23T01:36:28.852+0700","caller":"cmd/main.go:48","msg":"Successfully connected to database","host":"localhost","port":"5432"}
+{"level":"INFO","ts":"2025-02-23T01:36:28.852+0700","caller":"cmd/main.go:68","msg":"Server starting","port":"8080"}
+{"level":"INFO","ts":"2025-02-23T01:36:32.821+0700","caller":"middleware/log.go:24","msg":"Started DELETE /users/5b8a0adf-def6-4e53-8db5-d53165d0ad2a from [::1]:63288"}
+{"level":"INFO","ts":"2025-02-23T01:37:26.808+0700","caller":"cmd/main.go:30","msg":"User service starting","version":"1.0.0"}
+{"level":"INFO","ts":"2025-02-23T01:37:26.823+0700","caller":"cmd/main.go:48","msg":"Successfully connected to database","host":"localhost","port":"5432"}
+{"level":"INFO","ts":"2025-02-23T01:37:26.823+0700","caller":"cmd/main.go:68","msg":"Server starting","port":"8080"}
+{"level":"INFO","ts":"2025-02-23T01:37:28.651+0700","caller":"middleware/log.go:24","msg":"Started DELETE /users/5b8a0adf-def6-4e53-8db5-d53165d0ad2a from [::1]:63323"}
+{"level":"INFO","ts":"2025-02-23T01:37:28.660+0700","caller":"middleware/log.go:31","msg":"Completed /users/5b8a0adf-def6-4e53-8db5-d53165d0ad2a in 9.3054ms"}
+{"level":"INFO","ts":"2025-02-23T01:37:56.636+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=1&pageSize=10 from [::1]:63323"}
+{"level":"INFO","ts":"2025-02-23T01:37:56.639+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=1&pageSize=10 in 2.2394ms"}
+{"level":"INFO","ts":"2025-02-23T01:40:22.888+0700","caller":"cmd/main.go:30","msg":"User service starting","version":"1.0.0"}
+{"level":"INFO","ts":"2025-02-23T01:40:22.906+0700","caller":"cmd/main.go:48","msg":"Successfully connected to database","host":"localhost","port":"5432"}
+{"level":"INFO","ts":"2025-02-23T01:40:22.906+0700","caller":"cmd/main.go:68","msg":"Server starting","port":"8080"}
+{"level":"INFO","ts":"2025-02-23T01:43:31.398+0700","caller":"middleware/log.go:24","msg":"Started POST /users/validate from [::1]:63547"}
+{"level":"ERROR","ts":"2025-02-23T01:43:31.404+0700","caller":"service/user.go:132","msg":"[Service][Validate] failed to get user","error":"user not found"}
+{"level":"ERROR","ts":"2025-02-23T01:43:31.404+0700","caller":"rest/handler.go:221","msg":"[Handler][ValidateUser] failed to validate user","error":"user not found"}
+{"level":"INFO","ts":"2025-02-23T01:43:31.404+0700","caller":"middleware/log.go:31","msg":"Completed /users/validate in 6.6369ms"}
+{"level":"INFO","ts":"2025-02-23T02:02:35.143+0700","caller":"cmd/main.go:30","msg":"User service starting","version":"1.0.0"}
+{"level":"INFO","ts":"2025-02-23T02:02:35.159+0700","caller":"cmd/main.go:48","msg":"Successfully connected to database","host":"localhost","port":"5432"}
+{"level":"INFO","ts":"2025-02-23T02:02:35.159+0700","caller":"cmd/main.go:68","msg":"Server starting","port":"8083"}
+{"level":"INFO","ts":"2025-02-23T15:05:04.307+0700","caller":"cmd/main.go:30","msg":"User service starting","version":"1.0.0"}
+{"level":"INFO","ts":"2025-02-23T15:05:04.349+0700","caller":"cmd/main.go:48","msg":"Successfully connected to database","host":"localhost","port":"5432"}
+{"level":"INFO","ts":"2025-02-23T15:05:04.349+0700","caller":"cmd/main.go:68","msg":"Server starting","port":"8083"}
