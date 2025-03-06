@@ -10,6 +10,7 @@ import (
 	"user_service/internal/delivery/rest"
 	"user_service/internal/repository/postgres"
 	"user_service/internal/service"
+	"user_service/internal/util"
 	pkg "user_service/pkg/logger"
 
 	"github.com/gorilla/mux"
@@ -24,8 +25,10 @@ func main() {
 	dbHost := getEnv("DB_HOST", "localhost")
 	dbPort := getEnv("DB_PORT", "5432")
 	dbUser := getEnv("DB_USER", "postgres")
-	dbPass := getEnv("DB_PASSWORD", "changeme")
+	dbPass := getEnv("DB_PASSWORD", "postgres")
 	dbName := getEnv("DB_NAME", "user_db")
+
+	os.Setenv("SECRET_KEY", "sap-secrets")
 
 	logger.Info("User service starting", zap.String("version", "1.0.0"))
 
@@ -50,19 +53,29 @@ func main() {
 	// Initialize repositories
 	userRepo := postgres.NewUserRepository(db)
 
+	// jwt service
+	jwtService := util.NewJwtImpl()
+
 	// Initialize services
 	userService := service.NewUserService(userRepo, logger)
+	authService := service.NewAuthService(userRepo, jwtService, logger)
 
-	// Initialize handlers
-	userHandler := rest.NewUserHandler(userService, logger)
+	// Initialize auth middleware
+	authMiddleware := middleware.NewAuthMiddleware(jwtService)
 
 	// Setup router with logging middleware
 	router := mux.NewRouter()
 	router.Use(middleware.NewLogMiddleware(logger).LoggingMiddleware)
 
+	// Initialize handlers
+	userHandler := rest.NewUserHandler(userService, logger, authMiddleware)
+	authHandler := rest.NewAuthHandler(authService, userService, router, logger)
+
 	// Register routes
 	userHandler.RegisterRoutes(router)
+	authHandler.RegisterRoutes()
 
+	fmt.Println(os.Getenv("SECRET_KEY"))
 	// Start server
 	port := getEnv("PORT", "8083")
 	logger.Info("Server starting", zap.String("port", port))

@@ -14,6 +14,7 @@ import (
 type UserService interface {
 	Create(ctx context.Context, input models.CreateUserInput) (*models.User, error)
 	GetByID(ctx context.Context, id string) (*models.User, error)
+	GetByEmail(ctx context.Context, email string) (*models.User, error)
 	Update(ctx context.Context, id string, input models.UpdateUserInput) (*models.User, error)
 	Delete(ctx context.Context, id string) error
 	List(ctx context.Context, page, pageSize int) ([]*models.User, error)
@@ -73,9 +74,27 @@ func (s userService) Create(ctx context.Context, input models.CreateUserInput) (
 func (s userService) GetByID(ctx context.Context, id string) (*models.User, error) {
 	user, err := s.repo.GetByID(ctx, id)
 	if err != nil {
+		if errors.Is(err, ErrUserNotFound) {
+			s.log.Error("[Service][GetByID] user not found", zap.Error(err))
+			return nil, ErrUserNotFound
+		}
 		s.log.Error("[Service][GetByID] failed to get user", zap.Error(err))
-		return nil, ErrUserNotFound
+		return nil, err
 	}
+	return user, nil
+}
+
+func (s userService) GetByEmail(ctx context.Context, email string) (*models.User, error) {
+	user, err := s.repo.GetByEmail(ctx, email)
+	if err != nil {
+		if errors.Is(err, ErrUserNotFound) {
+			s.log.Error("[Service][GetByEmail] user not found", zap.Error(err))
+			return nil, ErrUserNotFound
+		}
+		s.log.Error("[Service][GetByEmail] failed to get user", zap.Error(err))
+		return nil, err
+	}
+
 	return user, nil
 }
 

@@ -19,6 +19,10 @@ func NewUserRepository(db *sqlx.DB) repository.UserRepository {
 	return &userRepository{db: db}
 }
 
+var (
+	ErrUserNotFound = errors.New("user not found")
+)
+
 func (r *userRepository) Create(ctx context.Context, user *models.User) error {
 	query := `
         INSERT INTO users (id, email, password, full_name, role, avatar, phone, status, created_at, updated_at)
@@ -44,7 +48,7 @@ func (r *userRepository) GetByID(ctx context.Context, id string) (*models.User, 
 	err := r.db.QueryRowx(query, id).StructScan(&user)
 
 	if errors.Is(err, sql.ErrNoRows) {
-		return nil, errors.New("user not found")
+		return nil, ErrUserNotFound
 	}
 
 	if err != nil {
@@ -64,7 +68,7 @@ func (r *userRepository) GetByEmail(ctx context.Context, email string) (*models.
 	err := r.db.QueryRowx(query, email).StructScan(&user)
 
 	if errors.Is(err, sql.ErrNoRows) {
-		return nil, errors.New("user not found")
+		return nil, ErrUserNotFound
 	}
 
 	if err != nil {
@@ -95,7 +99,7 @@ func (r *userRepository) Update(ctx context.Context, user *models.User) error {
 	}
 
 	if rows == 0 {
-		return errors.New("user not found")
+		return ErrUserNotFound
 	}
 
 	return nil
@@ -115,7 +119,7 @@ func (r *userRepository) Delete(ctx context.Context, id string) error {
 	}
 
 	if rows == 0 {
-		return errors.New("user not found")
+		return ErrUserNotFound
 	}
 
 	return nil
@@ -131,6 +135,9 @@ func (r *userRepository) List(ctx context.Context, page, pageSize int) ([]*model
 
 	rows, err := r.db.Queryx(query, pageSize, (page-1)*pageSize)
 	if err != nil {
+		if errors.Is(err, sql.ErrNoRows) {
+			return nil, ErrUserNotFound
+		}
 		return nil, err
 	}
 	defer rows.Close()

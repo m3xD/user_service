@@ -5,27 +5,30 @@ import (
 	"github.com/gorilla/mux"
 	"go.uber.org/zap"
 	"net/http"
+	"user_service/api/middleware"
 	"user_service/internal/models"
 	"user_service/internal/service"
 	"user_service/internal/util"
 )
 
 type UserHandler struct {
-	userService service.UserService
-	log         *zap.Logger
+	userService    service.UserService
+	authMiddleware *middleware.AuthMiddleware
+	log            *zap.Logger
 }
 
-func NewUserHandler(userService service.UserService, log *zap.Logger) *UserHandler {
-	return &UserHandler{userService: userService, log: log}
+func NewUserHandler(userService service.UserService, log *zap.Logger, authMiddleware *middleware.AuthMiddleware) *UserHandler {
+	return &UserHandler{userService: userService, log: log, authMiddleware: authMiddleware}
 }
 
 func (h *UserHandler) RegisterRoutes(r *mux.Router) {
-	r.HandleFunc("/users", h.CreateUser).Methods(http.MethodPost)
-	r.HandleFunc("/users/{id}", h.GetUser).Methods(http.MethodGet)
-	r.HandleFunc("/users/{id}", h.UpdateUser).Methods(http.MethodPut)
-	r.HandleFunc("/users/{id}", h.DeleteUser).Methods(http.MethodDelete)
-	r.HandleFunc("/users", h.ListUsers).Methods(http.MethodGet)
-	r.HandleFunc("/users/validate", h.ValidateUser).Methods(http.MethodPost)
+	r = r.PathPrefix("/users").Subrouter()
+	r.Use(h.authMiddleware.AuthMiddleware())
+	r.HandleFunc("/", h.CreateUser).Methods(http.MethodPost)
+	r.HandleFunc("/{id}", h.GetUser).Methods(http.MethodGet)
+	r.HandleFunc("/{id}", h.UpdateUser).Methods(http.MethodPut)
+	r.HandleFunc("/{id}", h.DeleteUser).Methods(http.MethodDelete)
+	r.HandleFunc("/", h.ListUsers).Methods(http.MethodGet)
 }
 
 var (

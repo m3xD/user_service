@@ -100,3 +100,68 @@
 {"level":"INFO","ts":"2025-02-23T15:05:04.307+0700","caller":"cmd/main.go:30","msg":"User service starting","version":"1.0.0"}
 {"level":"INFO","ts":"2025-02-23T15:05:04.349+0700","caller":"cmd/main.go:48","msg":"Successfully connected to database","host":"localhost","port":"5432"}
 {"level":"INFO","ts":"2025-02-23T15:05:04.349+0700","caller":"cmd/main.go:68","msg":"Server starting","port":"8083"}
+{"level":"INFO","ts":"2025-03-04T11:19:29.244+0700","caller":"cmd/main.go:31","msg":"User service starting","version":"1.0.0"}
+{"level":"ERROR","ts":"2025-03-04T11:19:29.260+0700","caller":"cmd/main.go:46","msg":"Failed to ping database","error":"pq: password authentication failed for user \"postgres\""}
+{"level":"INFO","ts":"2025-03-04T11:19:34.463+0700","caller":"cmd/main.go:31","msg":"User service starting","version":"1.0.0"}
+{"level":"INFO","ts":"2025-03-04T11:19:34.486+0700","caller":"cmd/main.go:49","msg":"Successfully connected to database","host":"localhost","port":"5432"}
+{"level":"INFO","ts":"2025-03-04T11:19:34.487+0700","caller":"cmd/main.go:75","msg":"Server starting","port":"8083"}
+{"level":"INFO","ts":"2025-03-04T11:21:30.236+0700","caller":"middleware/log.go:24","msg":"Started POST /users from [::1]:57341"}
+{"level":"INFO","ts":"2025-03-04T11:21:30.237+0700","caller":"middleware/log.go:31","msg":"Completed /users in 526.25µs"}
+{"level":"INFO","ts":"2025-03-04T11:21:31.090+0700","caller":"middleware/log.go:24","msg":"Started POST /users from [::1]:57341"}
+{"level":"INFO","ts":"2025-03-04T11:21:31.090+0700","caller":"middleware/log.go:31","msg":"Completed /users in 137.083µs"}
+{"level":"INFO","ts":"2025-03-04T11:21:31.758+0700","caller":"middleware/log.go:24","msg":"Started POST /users from [::1]:57341"}
+{"level":"INFO","ts":"2025-03-04T11:21:31.758+0700","caller":"middleware/log.go:31","msg":"Completed /users in 131.375µs"}
+{"level":"INFO","ts":"2025-03-04T11:22:49.323+0700","caller":"cmd/main.go:31","msg":"User service starting","version":"1.0.0"}
+{"level":"INFO","ts":"2025-03-04T11:22:49.333+0700","caller":"cmd/main.go:49","msg":"Successfully connected to database","host":"localhost","port":"5432"}
+{"level":"INFO","ts":"2025-03-04T11:22:49.333+0700","caller":"cmd/main.go:75","msg":"Server starting","port":"8083"}
+{"level":"INFO","ts":"2025-03-04T11:22:52.451+0700","caller":"middleware/log.go:24","msg":"Started POST /users from [::1]:57457"}
+{"level":"INFO","ts":"2025-03-04T11:22:52.553+0700","caller":"middleware/log.go:31","msg":"Completed /users in 102.360458ms"}
+{"level":"INFO","ts":"2025-03-05T10:57:06.234+0700","caller":"cmd/main.go:31","msg":"User service starting","version":"1.0.0"}
+{"level":"ERROR","ts":"2025-03-05T10:57:06.245+0700","caller":"cmd/main.go:46","msg":"Failed to ping database","error":"pq: role \"postgres\" does not exist"}
+{"level":"INFO","ts":"2025-03-05T10:57:47.741+0700","caller":"cmd/main.go:31","msg":"User service starting","version":"1.0.0"}
+{"level":"ERROR","ts":"2025-03-05T10:57:47.752+0700","caller":"cmd/main.go:46","msg":"Failed to ping database","error":"pq: role \"postgres\" does not exist"}
+{"level":"INFO","ts":"2025-03-05T11:01:02.787+0700","caller":"cmd/main.go:31","msg":"User service starting","version":"1.0.0"}
+{"level":"INFO","ts":"2025-03-05T11:01:02.813+0700","caller":"cmd/main.go:49","msg":"Successfully connected to database","host":"localhost","port":"5432"}
+{"level":"INFO","ts":"2025-03-05T11:01:02.813+0700","caller":"cmd/main.go:78","msg":"Server starting","port":"8083"}
+{"level":"INFO","ts":"2025-03-05T11:04:17.239+0700","caller":"cmd/main.go:31","msg":"User service starting","version":"1.0.0"}
+{"level":"INFO","ts":"2025-03-05T11:04:17.259+0700","caller":"cmd/main.go:49","msg":"Successfully connected to database","host":"localhost","port":"5432"}
+{"level":"INFO","ts":"2025-03-05T11:04:17.259+0700","caller":"cmd/main.go:80","msg":"Server starting","port":"8083"}
+{"level":"INFO","ts":"2025-03-05T11:05:07.299+0700","caller":"cmd/main.go:33","msg":"User service starting","version":"1.0.0"}
+{"level":"INFO","ts":"2025-03-05T11:05:07.320+0700","caller":"cmd/main.go:51","msg":"Successfully connected to database","host":"localhost","port":"5432"}
+{"level":"INFO","ts":"2025-03-05T11:05:07.320+0700","caller":"cmd/main.go:81","msg":"Server starting","port":"8083"}
+{"level":"INFO","ts":"2025-03-05T11:19:10.270+0700","caller":"middleware/log.go:24","msg":"Started POST /auth/login from [::1]:63575"}
+{"level":"ERROR","ts":"2025-03-05T11:19:10.290+0700","caller":"service/auth.go:26","msg":"[AuthService][Login] failed to validate credentials","error":"user not found"}
+{"level":"ERROR","ts":"2025-03-05T11:19:10.294+0700","caller":"rest/auth.go:52","msg":"[Handler][Login] failed to login","error":"invalid credentials"}
+{"level":"INFO","ts":"2025-03-05T11:19:10.294+0700","caller":"middleware/log.go:31","msg":"Completed /auth/login in 24.006167ms"}
+{"level":"INFO","ts":"2025-03-05T11:19:14.339+0700","caller":"middleware/log.go:24","msg":"Started POST /auth/login from [::1]:63575"}
+{"level":"ERROR","ts":"2025-03-05T11:19:14.352+0700","caller":"service/auth.go:26","msg":"[AuthService][Login] failed to validate credentials","error":"user not found"}
+{"level":"ERROR","ts":"2025-03-05T11:19:14.352+0700","caller":"rest/auth.go:52","msg":"[Handler][Login] failed to login","error":"invalid credentials"}
+{"level":"INFO","ts":"2025-03-05T11:19:14.352+0700","caller":"middleware/log.go:31","msg":"Completed /auth/login in 13.318459ms"}
+{"level":"INFO","ts":"2025-03-05T11:24:39.494+0700","caller":"cmd/main.go:33","msg":"User service starting","version":"1.0.0"}
+{"level":"INFO","ts":"2025-03-05T11:24:39.511+0700","caller":"cmd/main.go:51","msg":"Successfully connected to database","host":"localhost","port":"5432"}
+{"level":"INFO","ts":"2025-03-05T11:24:39.511+0700","caller":"cmd/main.go:81","msg":"Server starting","port":"8083"}
+{"level":"INFO","ts":"2025-03-05T11:26:16.904+0700","caller":"cmd/main.go:33","msg":"User service starting","version":"1.0.0"}
+{"level":"INFO","ts":"2025-03-05T11:26:16.922+0700","caller":"cmd/main.go:51","msg":"Successfully connected to database","host":"localhost","port":"5432"}
+{"level":"INFO","ts":"2025-03-05T11:26:16.922+0700","caller":"cmd/main.go:81","msg":"Server starting","port":"8083"}
+{"level":"INFO","ts":"2025-03-05T11:26:19.517+0700","caller":"middleware/log.go:24","msg":"Started POST /auth/login from [::1]:63836"}
+{"level":"ERROR","ts":"2025-03-05T11:26:19.517+0700","caller":"rest/auth.go:40","msg":"[Handler][Login] invalid request body","error":"email is required"}
+{"level":"INFO","ts":"2025-03-05T11:26:19.518+0700","caller":"middleware/log.go:31","msg":"Completed /auth/login in 548.75µs"}
+{"level":"INFO","ts":"2025-03-05T11:26:23.066+0700","caller":"middleware/log.go:24","msg":"Started POST /auth/login from [::1]:63836"}
+{"level":"ERROR","ts":"2025-03-05T11:26:23.066+0700","caller":"rest/auth.go:40","msg":"[Handler][Login] invalid request body","error":"email is required"}
+{"level":"INFO","ts":"2025-03-05T11:26:23.066+0700","caller":"middleware/log.go:31","msg":"Completed /auth/login in 236.542µs"}
+{"level":"INFO","ts":"2025-03-05T11:27:47.031+0700","caller":"middleware/log.go:24","msg":"Started GET /users/ from [::1]:63909"}
+{"level":"INFO","ts":"2025-03-05T11:27:47.032+0700","caller":"middleware/log.go:31","msg":"Completed /users/ in 1.331625ms"}
+{"level":"INFO","ts":"2025-03-05T11:27:50.695+0700","caller":"middleware/log.go:24","msg":"Started GET /users/ from [::1]:63909"}
+{"level":"INFO","ts":"2025-03-05T11:27:50.695+0700","caller":"middleware/log.go:31","msg":"Completed /users/ in 105.75µs"}
+{"level":"INFO","ts":"2025-03-05T11:50:37.846+0700","caller":"cmd/main.go:33","msg":"User service starting","version":"1.0.0"}
+{"level":"INFO","ts":"2025-03-05T11:50:37.860+0700","caller":"cmd/main.go:51","msg":"Successfully connected to database","host":"localhost","port":"5432"}
+{"level":"INFO","ts":"2025-03-05T11:50:37.860+0700","caller":"cmd/main.go:81","msg":"Server starting","port":"8083"}
+{"level":"INFO","ts":"2025-03-05T11:50:46.328+0700","caller":"middleware/log.go:24","msg":"Started POST /auth/login from [::1]:64603"}
+{"level":"ERROR","ts":"2025-03-05T11:50:46.337+0700","caller":"service/auth.go:37","msg":"[AuthService][Login] failed to generate access token","error":"key is of invalid type: HMAC sign expects []byte"}
+{"level":"ERROR","ts":"2025-03-05T11:50:46.337+0700","caller":"rest/auth.go:64","msg":"[Handler][Login] failed to login","error":"key is of invalid type: HMAC sign expects []byte"}
+{"level":"INFO","ts":"2025-03-05T11:50:46.337+0700","caller":"middleware/log.go:31","msg":"Completed /auth/login in 9.090458ms"}
+{"level":"INFO","ts":"2025-03-05T11:53:45.091+0700","caller":"cmd/main.go:33","msg":"User service starting","version":"1.0.0"}
+{"level":"INFO","ts":"2025-03-05T11:53:45.114+0700","caller":"cmd/main.go:51","msg":"Successfully connected to database","host":"localhost","port":"5432"}
+{"level":"INFO","ts":"2025-03-05T11:53:45.114+0700","caller":"cmd/main.go:81","msg":"Server starting","port":"8083"}
+{"level":"INFO","ts":"2025-03-05T11:53:46.432+0700","caller":"middleware/log.go:24","msg":"Started POST /auth/login from [::1]:64667"}
+{"level":"INFO","ts":"2025-03-05T11:53:46.520+0700","caller":"middleware/log.go:31","msg":"Completed /auth/login in 88.42275ms"}

@@ -52,9 +52,3 @@ type LoginInput struct {
 	Email    string `json:"email" validate:"required,email"`
 	Password string `json:"password" validate:"required"`
 }
-
-// LoginResponse represents the response for successful login
-type LoginResponse struct {
-	Token string `json:"token"`
-	User  *User  `json:"user"`
-}
