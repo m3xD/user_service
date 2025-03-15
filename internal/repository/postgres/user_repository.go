@@ -4,10 +4,12 @@ import (
 	"context"
 	"database/sql"
 	"errors"
+	"fmt"
 	"github.com/jmoiron/sqlx"
 	"time"
 	"user_service/internal/models"
 	"user_service/internal/repository"
+	"user_service/internal/util"
 )
 
 type userRepository struct {
@@ -81,7 +83,7 @@ func (r *userRepository) GetByEmail(ctx context.Context, email string) (*models.
 func (r *userRepository) Update(ctx context.Context, user *models.User) error {
 	query := `
         UPDATE users
-        SET full_name = :full_name, avatar = :avatar, phone = :phone, status = :status, updated_at = :updated_at
+        SET full_name = :full_name, avatar = :avatar, phone = :phone, status = :status, updated_at = :updated_at, password = :password, role = :role, email = :email, last_login = :last_login, last_activity = :last_activity
         WHERE id = :id
     `
 
@@ -125,20 +127,23 @@ func (r *userRepository) Delete(ctx context.Context, id string) error {
 	return nil
 }
 
-func (r *userRepository) List(ctx context.Context, page, pageSize int) ([]*models.User, error) {
-	query := `
-        SELECT id, email, password, full_name, role, avatar, phone, status, created_at, updated_at
-        FROM users
-        ORDER BY created_at DESC
-        LIMIT $1 OFFSET $2
-    `
-
-	rows, err := r.db.Queryx(query, pageSize, (page-1)*pageSize)
+func (r *userRepository) List(ctx context.Context, params util.PaginationParams) ([]*models.User, int64, error) {
+	query, countQuery, args, err := util.BuildUserListQuery(params)
 	if err != nil {
-		if errors.Is(err, sql.ErrNoRows) {
-			return nil, ErrUserNotFound
-		}
-		return nil, err
+		return nil, 0, fmt.Errorf("failed to build query: %w", err)
+	}
+
+	// Get total count
+	var total int64
+	err = r.db.QueryRow(countQuery, args[:len(args)-2]...).Scan(&total)
+	if err != nil {
+		return nil, 0, fmt.Errorf("failed to get total count: %w", err)
+	}
+
+	// Execute the main query
+	rows, err := r.db.Queryx(query, args...)
+	if err != nil {
+		return nil, 0, fmt.Errorf("failed to query users: %w", err)
 	}
 	defer rows.Close()
 
@@ -147,14 +152,26 @@ func (r *userRepository) List(ctx context.Context, page, pageSize int) ([]*model
 		var user models.User
 		err = rows.StructScan(&user)
 		if err != nil {
-			return nil, err
+			return nil, 0, err
 		}
 		users = append(users, &user)
 	}
 
 	if err = rows.Err(); err != nil {
-		return nil, err
+		return nil, 0, err
 	}
 
-	return users, nil
+	return users, total, nil
+}
+
+func (r *userRepository) CountUser(ctx context.Context) (int, error) {
+	query := `SELECT COUNT(*) FROM users`
+
+	var count int
+	err := r.db.Get(&count, query)
+	if err != nil {
+		return 0, err
+	}
+
+	return count, nil
 }

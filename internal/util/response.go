@@ -5,24 +5,35 @@ import (
 	"net/http"
 )
 
-type Response struct {
-	StatusCode int         `json:"status_code"`
-	Message    string      `json:"message"`
-	Data       interface{} `json:"data"`
+type ErrReason struct {
+	Field   string `json:"field"`
+	Message string `json:"message"`
 }
 
-func ResponseOK(w http.ResponseWriter, res Response) {
+type ResponseError struct {
+	Status    string      `json:"status"`
+	TimeStamp string      `json:"timestamp"`
+	Message   string      `json:"message"`
+	Errors    []ErrReason `json:"errors,omitempty"`
+	Path      string      `json:"path,omitempty"`
+}
+
+type ResponseSuccess struct {
+	Message string `json:"message"`
+}
+
+func ResponseOK(w http.ResponseWriter, res interface{}, statusCode int) {
 	w.Header().Set("Content-Type", "application/json")
-	w.WriteHeader(res.StatusCode)
+	w.WriteHeader(statusCode)
 	if err := json.NewEncoder(w).Encode(res); err != nil {
-		http.Error(w, err.Error(), res.StatusCode)
+		http.Error(w, err.Error(), statusCode)
 	}
 }
 
-func ResponseError(w http.ResponseWriter, res Response) {
+func ResponseErr(w http.ResponseWriter, res ResponseError, statusCode int) {
 	w.Header().Set("Content-Type", "application/json")
-	w.WriteHeader(res.StatusCode)
+	w.WriteHeader(statusCode)
 	if err := json.NewEncoder(w).Encode(res); err != nil {
-		http.Error(w, err.Error(), res.StatusCode)
+		http.Error(w, err.Error(), statusCode)
 	}
 }

@@ -5,15 +5,16 @@ import (
 	"github.com/golang-jwt/jwt/v5"
 	"net/http"
 	"strings"
+	"time"
 	"user_service/internal/util"
 )
 
 type AuthMiddleware struct {
-	jwtService util.Jwt
+	JwtService util.Jwt
 }
 
 func NewAuthMiddleware(jwtService util.Jwt) *AuthMiddleware {
-	return &AuthMiddleware{jwtService: jwtService}
+	return &AuthMiddleware{JwtService: jwtService}
 }
 
 func (auth *AuthMiddleware) AuthMiddleware() func(next http.Handler) http.Handler {
@@ -21,33 +22,36 @@ func (auth *AuthMiddleware) AuthMiddleware() func(next http.Handler) http.Handle
 		return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 			token := r.Header.Get("Authorization")
 			if token == "" {
-				util.ResponseError(w, util.Response{
-					StatusCode: http.StatusUnauthorized,
-					Message:    "missing authorization header",
-					Data:       nil,
-				})
+				util.ResponseErr(w, util.ResponseError{
+					Status:    "UNAUTHORIZED",
+					TimeStamp: time.Now().String(),
+					Message:   "authorization header is required",
+					Errors:    nil,
+				}, http.StatusUnauthorized)
 				return
 			}
 
 			parts := strings.Split(token, " ")
 
 			if len(parts) != 2 || parts[0] != "Bearer" {
-				util.ResponseError(w, util.Response{
-					StatusCode: http.StatusUnauthorized,
-					Message:    "invalid authorization header",
-					Data:       nil,
-				})
+				util.ResponseErr(w, util.ResponseError{
+					Status:    "UNAUTHORIZED",
+					TimeStamp: time.Now().String(),
+					Message:   "authorization header is required",
+					Errors:    nil,
+				}, http.StatusUnauthorized)
 				return
 			}
 			token = parts[1]
 
-			claims, err := auth.jwtService.ValidateToken(token)
+			claims, err := auth.JwtService.ValidateAccessToken(token)
 			if err != nil {
-				util.ResponseError(w, util.Response{
-					StatusCode: http.StatusUnauthorized,
-					Message:    "unauthorized",
-					Data:       nil,
-				})
+				util.ResponseErr(w, util.ResponseError{
+					Status:    "UNAUTHORIZED",
+					TimeStamp: time.Now().String(),
+					Message:   "invalid token",
+					Errors:    nil,
+				}, http.StatusUnauthorized)
 				return
 			}
 
@@ -68,11 +72,12 @@ func (auth *AuthMiddleware) ACLMiddleware(allowRoles ...string) func(next http.H
 					return
 				}
 			}
-			util.ResponseError(w, util.Response{
-				StatusCode: http.StatusForbidden,
-				Message:    "forbidden",
-				Data:       nil,
-			})
+			util.ResponseErr(w, util.ResponseError{
+				Status:    "FORBIDDEN",
+				TimeStamp: time.Now().String(),
+				Message:   "forbidden",
+				Errors:    nil,
+			}, http.StatusForbidden)
 		})
 	}
 }
@@ -88,11 +93,12 @@ func (auth *AuthMiddleware) OwnerMiddleware() func(next http.Handler) http.Handl
 				next.ServeHTTP(w, r)
 				return
 			}
-			util.ResponseError(w, util.Response{
-				StatusCode: http.StatusForbidden,
-				Message:    "forbidden",
-				Data:       nil,
-			})
+			util.ResponseErr(w, util.ResponseError{
+				Status:    "FORBIDDEN",
+				TimeStamp: time.Now().String(),
+				Message:   "forbidden",
+				Errors:    nil,
+			}, http.StatusForbidden)
 		})
 	}
 }
