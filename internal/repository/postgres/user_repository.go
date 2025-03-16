@@ -27,8 +27,8 @@ var (
 
 func (r *userRepository) Create(ctx context.Context, user *models.User) error {
 	query := `
-        INSERT INTO users (id, email, password, full_name, role, avatar, phone, status, created_at, updated_at)
-        VALUES (:id, :email, :password, :full_name, :role, :avatar, :phone, :status, :created_at, :updated_at)
+        INSERT INTO users (id, email, password, name, role, avatar, phone, status, created_at, updated_at)
+        VALUES (:id, :email, :password, :name, :role, :avatar, :phone, :status, :created_at, :updated_at)
     `
 	_, err := r.db.NamedExec(query, user)
 
@@ -41,7 +41,7 @@ func (r *userRepository) Create(ctx context.Context, user *models.User) error {
 
 func (r *userRepository) GetByID(ctx context.Context, id string) (*models.User, error) {
 	query := `
-        SELECT id, email, password, full_name, role, avatar, phone, status, created_at, updated_at
+        SELECT id, email, password, name, role, avatar, phone, status, created_at, updated_at
         FROM users WHERE id = $1
     `
 
@@ -62,7 +62,7 @@ func (r *userRepository) GetByID(ctx context.Context, id string) (*models.User, 
 
 func (r *userRepository) GetByEmail(ctx context.Context, email string) (*models.User, error) {
 	query := `
-        SELECT id, email, password, full_name, role, avatar, phone, status, created_at, updated_at
+        SELECT id, email, password, name, role, avatar, phone, status, created_at, updated_at
         FROM users WHERE email = $1
     `
 
@@ -83,7 +83,7 @@ func (r *userRepository) GetByEmail(ctx context.Context, email string) (*models.
 func (r *userRepository) Update(ctx context.Context, user *models.User) error {
 	query := `
         UPDATE users
-        SET full_name = :full_name, avatar = :avatar, phone = :phone, status = :status, updated_at = :updated_at, password = :password, role = :role, email = :email, last_login = :last_login, last_activity = :last_activity
+        SET name = :name, avatar = :avatar, phone = :phone, status = :status, updated_at = :updated_at, password = :password, role = :role, email = :email, last_login = :last_login, last_activity = :last_activity
         WHERE id = :id
     `
 

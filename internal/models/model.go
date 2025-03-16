@@ -22,7 +22,7 @@ type User struct {
 	ID           string    `json:"id" db:"id"`
 	Email        string    `json:"email" db:"email"`
 	Password     string    `json:"-" db:"password"` // Not exposed in JSON
-	FullName     string    `json:"fullName" db:"full_name"`
+	FullName     string    `json:"fullName" db:"name"`
 	Role         string    `json:"role" db:"role"` // user, admin
 	Avatar       string    `json:"avatar,omitempty" db:"avatar"`
 	Phone        string    `json:"phone" db:"phone"`
@@ -37,14 +37,14 @@ type User struct {
 type CreateUserInput struct {
 	Email    string `json:"email" validate:"required,email"`
 	Password string `json:"password" validate:"required,min=8"`
-	FullName string `json:"full_name" validate:"required"`
+	FullName string `json:"fullName" validate:"required"`
 	Phone    string `json:"phone" validate:"required"`
 	Role     string `json:"role" validate:"required,oneof=user admin"`
 }
 
 // UpdateUserInput represents the input for user update
 type UpdateUserInput struct {
-	FullName string `json:"full_name,omitempty"`
+	FullName string `json:"fullName,omitempty"`
 	Phone    string `json:"phone,omitempty"`
 	Avatar   string `json:"avatar,omitempty"`
 	Status   string `json:"status,omitempty" validate:"omitempty,oneof=active inactive"`
@@ -59,7 +59,7 @@ type LoginInput struct {
 type UserSummary struct {
 	Id string `json:"id,omitempty"`
 
-	Name string `json:"name,omitempty"`
+	Name string `json:"fullName,omitempty"`
 
 	Email string `json:"email,omitempty"`
 

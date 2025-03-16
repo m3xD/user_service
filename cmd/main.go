@@ -17,7 +17,6 @@ import (
 
 	"github.com/gorilla/mux"
 	_ "github.com/lib/pq"
-	_ "user_service/docs"
 )
 
 // @title           User Service API
@@ -58,7 +57,7 @@ func main() {
 	logger.Info("User service starting", zap.String("version", "1.0.0"))
 
 	// Connect to database
-	dbURL := getEnv("DATABASE_URL", "postgres://postgres:postgres@localhost:5432/user_db?sslmode=disable")
+	dbURL := getEnv("DATABASE_URL", "postgres://postgres:changeme@localhost:5432/secure_assessment?sslmode=disable")
 
 	db, err := sqlx.Open("postgres", dbURL)
 	if err != nil {

@@ -165,6 +165,8 @@
 {"level":"INFO","ts":"2025-03-05T11:53:45.114+0700","caller":"cmd/main.go:81","msg":"Server starting","port":"8083"}
 {"level":"INFO","ts":"2025-03-05T11:53:46.432+0700","caller":"middleware/log.go:24","msg":"Started POST /auth/login from [::1]:64667"}
 {"level":"INFO","ts":"2025-03-05T11:53:46.520+0700","caller":"middleware/log.go:31","msg":"Completed /auth/login in 88.42275ms"}
+{"level":"INFO","ts":"2025-03-06T23:20:05.681+0700","caller":"cmd/main.go:33","msg":"User service starting","version":"1.0.0"}
+{"level":"ERROR","ts":"2025-03-06T23:20:05.693+0700","caller":"cmd/main.go:48","msg":"Failed to ping database","error":"dial tcp [::1]:5432: connectex: No connection could be made because the target machine actively refused it."}
 {"level":"INFO","ts":"2025-03-07T10:31:32.243+0700","caller":"cmd/main.go:55","msg":"User service starting","version":"1.0.0"}
 {"level":"INFO","ts":"2025-03-07T10:31:32.272+0700","caller":"cmd/main.go:72","msg":"Successfully connected to database"}
 {"level":"INFO","ts":"2025-03-07T10:31:32.272+0700","caller":"cmd/main.go:108","msg":"Server starting","port":"8083"}
@@ -1998,3 +2000,504 @@
 {"level":"INFO","ts":"2025-03-11T09:21:02.785+0700","caller":"middleware/log.go:31","msg":"Completed /users?size=1 in 3.368542ms"}
 {"level":"INFO","ts":"2025-03-11T09:21:02.787+0700","caller":"middleware/log.go:24","msg":"Started GET /users?size=1 from [::1]:49830"}
 {"level":"INFO","ts":"2025-03-11T09:21:02.789+0700","caller":"middleware/log.go:31","msg":"Completed /users?size=1 in 2.870791ms"}
+{"level":"INFO","ts":"2025-03-16T14:56:48.613+0700","caller":"cmd/main.go:57","msg":"User service starting","version":"1.0.0"}
+{"level":"ERROR","ts":"2025-03-16T14:56:48.632+0700","caller":"cmd/main.go:71","msg":"Failed to ping database","error":"pq: password authentication failed for user \"postgres\""}
+{"level":"INFO","ts":"2025-03-16T14:57:58.545+0700","caller":"cmd/main.go:57","msg":"User service starting","version":"1.0.0"}
+{"level":"INFO","ts":"2025-03-16T14:57:58.597+0700","caller":"cmd/main.go:74","msg":"Successfully connected to database"}
+{"level":"INFO","ts":"2025-03-16T14:57:58.597+0700","caller":"cmd/main.go:115","msg":"Server starting","port":"8083"}
+{"level":"INFO","ts":"2025-03-16T15:09:16.757+0700","caller":"middleware/log.go:24","msg":"Started POST /auth/login from 192.168.51.193:55335"}
+{"level":"ERROR","ts":"2025-03-16T15:09:16.757+0700","caller":"rest/auth.go:88","msg":"[Handler][Login] invalid request body","error":"email is required"}
+{"level":"INFO","ts":"2025-03-16T15:09:16.758+0700","caller":"middleware/log.go:31","msg":"Completed /auth/login in 523.8µs"}
+{"level":"INFO","ts":"2025-03-16T15:09:36.622+0700","caller":"middleware/log.go:24","msg":"Started POST /auth/login from 192.168.51.193:55335"}
+{"level":"INFO","ts":"2025-03-16T15:09:36.694+0700","caller":"middleware/log.go:31","msg":"Completed /auth/login in 71.9251ms"}
+{"level":"INFO","ts":"2025-03-16T15:09:55.021+0700","caller":"middleware/log.go:24","msg":"Started POST /auth/login from 192.168.51.193:55335"}
+{"level":"INFO","ts":"2025-03-16T15:09:55.083+0700","caller":"middleware/log.go:31","msg":"Completed /auth/login in 61.992ms"}
+{"level":"INFO","ts":"2025-03-16T15:10:09.467+0700","caller":"middleware/log.go:24","msg":"Started POST /auth/login from 192.168.51.193:55335"}
+{"level":"ERROR","ts":"2025-03-16T15:10:09.469+0700","caller":"service/user.go:171","msg":"[Service][Validate] user not found","error":"user not found"}
+{"level":"ERROR","ts":"2025-03-16T15:10:09.470+0700","caller":"rest/auth.go:107","msg":"[Handler][Login] user not found","error":"user not found"}
+{"level":"INFO","ts":"2025-03-16T15:10:09.470+0700","caller":"middleware/log.go:31","msg":"Completed /auth/login in 2.4202ms"}
+{"level":"INFO","ts":"2025-03-16T15:10:14.233+0700","caller":"middleware/log.go:24","msg":"Started POST /auth/login from 192.168.51.193:55335"}
+{"level":"ERROR","ts":"2025-03-16T15:10:14.303+0700","caller":"service/user.go:179","msg":"[Service][Validate] invalid password","error":"crypto/bcrypt: hashedPassword is not the hash of the given password"}
+{"level":"ERROR","ts":"2025-03-16T15:10:14.304+0700","caller":"rest/auth.go:116","msg":"[Handler][Login] failed to login","error":"invalid email or password"}
+{"level":"INFO","ts":"2025-03-16T15:10:14.304+0700","caller":"middleware/log.go:31","msg":"Completed /auth/login in 70.9902ms"}
+{"level":"INFO","ts":"2025-03-16T15:11:03.050+0700","caller":"middleware/log.go:24","msg":"Started POST /auth/login from [::1]:55404"}
+{"level":"INFO","ts":"2025-03-16T15:11:03.113+0700","caller":"middleware/log.go:31","msg":"Completed /auth/login in 62.8919ms"}
+{"level":"INFO","ts":"2025-03-16T15:11:03.189+0700","caller":"middleware/log.go:24","msg":"Started GET /users?size=1 from [::1]:55405"}
+{"level":"INFO","ts":"2025-03-16T15:11:03.192+0700","caller":"middleware/log.go:31","msg":"Completed /users?size=1 in 3.4643ms"}
+{"level":"INFO","ts":"2025-03-16T15:11:03.193+0700","caller":"middleware/log.go:24","msg":"Started GET /users?size=1 from [::1]:55404"}
+{"level":"INFO","ts":"2025-03-16T15:11:03.197+0700","caller":"middleware/log.go:31","msg":"Completed /users?size=1 in 3.8424ms"}
+{"level":"INFO","ts":"2025-03-16T15:11:11.343+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10 from [::1]:55405"}
+{"level":"INFO","ts":"2025-03-16T15:11:11.349+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10 in 5.9557ms"}
+{"level":"INFO","ts":"2025-03-16T15:11:11.350+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10 from [::1]:55404"}
+{"level":"INFO","ts":"2025-03-16T15:11:11.354+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10 in 3.5868ms"}
+{"level":"INFO","ts":"2025-03-16T15:11:13.908+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10 from [::1]:55404"}
+{"level":"INFO","ts":"2025-03-16T15:11:13.912+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10 in 4.1185ms"}
+{"level":"INFO","ts":"2025-03-16T15:11:13.913+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10 from [::1]:55405"}
+{"level":"INFO","ts":"2025-03-16T15:11:13.916+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10 in 3.0499ms"}
+{"level":"INFO","ts":"2025-03-16T15:14:34.096+0700","caller":"middleware/log.go:24","msg":"Started GET /users?size=1 from [::1]:55405"}
+{"level":"INFO","ts":"2025-03-16T15:14:34.101+0700","caller":"middleware/log.go:31","msg":"Completed /users?size=1 in 4.7881ms"}
+{"level":"INFO","ts":"2025-03-16T15:14:34.103+0700","caller":"middleware/log.go:24","msg":"Started GET /users?size=1 from [::1]:55404"}
+{"level":"INFO","ts":"2025-03-16T15:14:34.107+0700","caller":"middleware/log.go:31","msg":"Completed /users?size=1 in 4.1207ms"}
+{"level":"INFO","ts":"2025-03-16T15:15:24.309+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10 from [::1]:55405"}
+{"level":"INFO","ts":"2025-03-16T15:15:24.312+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10 in 2.9839ms"}
+{"level":"INFO","ts":"2025-03-16T15:15:24.314+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10 from [::1]:55404"}
+{"level":"INFO","ts":"2025-03-16T15:15:24.317+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10 in 3.2163ms"}
+{"level":"INFO","ts":"2025-03-16T15:15:25.300+0700","caller":"middleware/log.go:24","msg":"Started GET /users?size=1 from [::1]:55405"}
+{"level":"INFO","ts":"2025-03-16T15:15:25.308+0700","caller":"middleware/log.go:31","msg":"Completed /users?size=1 in 8.4652ms"}
+{"level":"INFO","ts":"2025-03-16T15:15:25.314+0700","caller":"middleware/log.go:24","msg":"Started GET /users?size=1 from [::1]:55404"}
+{"level":"INFO","ts":"2025-03-16T15:15:25.321+0700","caller":"middleware/log.go:31","msg":"Completed /users?size=1 in 6.4477ms"}
+{"level":"INFO","ts":"2025-03-16T15:15:25.718+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10 from [::1]:55404"}
+{"level":"INFO","ts":"2025-03-16T15:15:25.723+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10 in 4.0341ms"}
+{"level":"INFO","ts":"2025-03-16T15:15:25.724+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10 from [::1]:55405"}
+{"level":"INFO","ts":"2025-03-16T15:15:25.727+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10 in 3.5989ms"}
+{"level":"INFO","ts":"2025-03-16T15:32:21.831+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10 from [::1]:56974"}
+{"level":"INFO","ts":"2025-03-16T15:32:21.834+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10 in 3.5729ms"}
+{"level":"INFO","ts":"2025-03-16T15:32:21.836+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10 from [::1]:56973"}
+{"level":"INFO","ts":"2025-03-16T15:32:21.838+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10 in 2.6937ms"}
+{"level":"INFO","ts":"2025-03-16T15:32:25.391+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10 from [::1]:56973"}
+{"level":"INFO","ts":"2025-03-16T15:32:25.395+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10 in 4.0039ms"}
+{"level":"INFO","ts":"2025-03-16T15:32:25.397+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10 from [::1]:56974"}
+{"level":"INFO","ts":"2025-03-16T15:32:25.402+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10 in 4.7147ms"}
+{"level":"INFO","ts":"2025-03-16T15:33:01.772+0700","caller":"middleware/log.go:24","msg":"Started POST /auth/logout from [::1]:56973"}
+{"level":"INFO","ts":"2025-03-16T15:33:01.790+0700","caller":"middleware/log.go:31","msg":"Completed /auth/logout in 17.7478ms"}
+{"level":"INFO","ts":"2025-03-16T17:44:27.517+0700","caller":"middleware/log.go:24","msg":"Started POST /auth/login from [::1]:54341"}
+{"level":"INFO","ts":"2025-03-16T17:44:27.585+0700","caller":"middleware/log.go:31","msg":"Completed /auth/login in 68.2056ms"}
+{"level":"INFO","ts":"2025-03-16T17:45:01.427+0700","caller":"middleware/log.go:24","msg":"Started POST /auth/login from [::1]:54341"}
+{"level":"INFO","ts":"2025-03-16T17:45:01.503+0700","caller":"middleware/log.go:31","msg":"Completed /auth/login in 75.9571ms"}
+{"level":"INFO","ts":"2025-03-16T17:45:23.705+0700","caller":"middleware/log.go:24","msg":"Started POST /auth/login from [::1]:54341"}
+{"level":"INFO","ts":"2025-03-16T17:45:23.767+0700","caller":"middleware/log.go:31","msg":"Completed /auth/login in 62.0141ms"}
+{"level":"INFO","ts":"2025-03-16T17:49:23.666+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10 from [::1]:54341"}
+{"level":"INFO","ts":"2025-03-16T17:49:23.676+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10 in 10.7324ms"}
+{"level":"INFO","ts":"2025-03-16T17:49:23.678+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10 from [::1]:54647"}
+{"level":"INFO","ts":"2025-03-16T17:49:23.683+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10 in 4.7343ms"}
+{"level":"INFO","ts":"2025-03-16T17:49:49.952+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10 from [::1]:54647"}
+{"level":"INFO","ts":"2025-03-16T17:49:49.956+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10 in 4.623ms"}
+{"level":"INFO","ts":"2025-03-16T17:49:49.958+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10 from [::1]:54341"}
+{"level":"INFO","ts":"2025-03-16T17:49:49.963+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10 in 4.1711ms"}
+{"level":"INFO","ts":"2025-03-16T17:49:52.376+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10 from [::1]:54341"}
+{"level":"INFO","ts":"2025-03-16T17:49:52.382+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10 in 5.7416ms"}
+{"level":"INFO","ts":"2025-03-16T17:49:52.384+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10 from [::1]:54647"}
+{"level":"INFO","ts":"2025-03-16T17:49:52.388+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10 in 4.6414ms"}
+{"level":"INFO","ts":"2025-03-16T17:49:54.003+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10 from [::1]:54647"}
+{"level":"INFO","ts":"2025-03-16T17:49:54.017+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10 in 13.9429ms"}
+{"level":"INFO","ts":"2025-03-16T17:49:54.018+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10 from [::1]:54341"}
+{"level":"INFO","ts":"2025-03-16T17:49:54.024+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10 in 6.3748ms"}
+{"level":"INFO","ts":"2025-03-16T17:49:57.069+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10 from [::1]:54647"}
+{"level":"INFO","ts":"2025-03-16T17:49:57.077+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10 in 8.5967ms"}
+{"level":"INFO","ts":"2025-03-16T17:49:57.079+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10 from [::1]:54341"}
+{"level":"INFO","ts":"2025-03-16T17:49:57.087+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10 in 8ms"}
+{"level":"INFO","ts":"2025-03-16T17:50:00.976+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10 from [::1]:54341"}
+{"level":"INFO","ts":"2025-03-16T17:50:00.980+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10 in 3.8336ms"}
+{"level":"INFO","ts":"2025-03-16T17:50:00.981+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10 from [::1]:54647"}
+{"level":"INFO","ts":"2025-03-16T17:50:00.984+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10 in 3.0235ms"}
+{"level":"INFO","ts":"2025-03-16T17:50:05.528+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10&role=admin from [::1]:54647"}
+{"level":"INFO","ts":"2025-03-16T17:50:05.539+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10&role=admin in 11.7974ms"}
+{"level":"INFO","ts":"2025-03-16T17:50:05.945+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10&role=teacher from [::1]:54647"}
+{"level":"INFO","ts":"2025-03-16T17:50:05.955+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10&role=teacher in 10.1662ms"}
+{"level":"INFO","ts":"2025-03-16T17:50:06.217+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10&role=student from [::1]:54647"}
+{"level":"INFO","ts":"2025-03-16T17:50:06.228+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10&role=student in 11.0454ms"}
+{"level":"INFO","ts":"2025-03-16T17:50:07.079+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10&role=teacher from [::1]:54647"}
+{"level":"INFO","ts":"2025-03-16T17:50:07.089+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10&role=teacher in 10.5653ms"}
+{"level":"INFO","ts":"2025-03-16T17:50:07.771+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10&role=admin from [::1]:54647"}
+{"level":"INFO","ts":"2025-03-16T17:50:07.781+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10&role=admin in 9.6419ms"}
+{"level":"INFO","ts":"2025-03-16T17:50:08.222+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10 from [::1]:54647"}
+{"level":"INFO","ts":"2025-03-16T17:50:08.230+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10 in 7.8991ms"}
+{"level":"INFO","ts":"2025-03-16T17:50:08.770+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10&role=admin from [::1]:54647"}
+{"level":"INFO","ts":"2025-03-16T17:50:08.777+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10&role=admin in 6.7238ms"}
+{"level":"INFO","ts":"2025-03-16T17:50:09.128+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10 from [::1]:54647"}
+{"level":"INFO","ts":"2025-03-16T17:50:09.139+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10 in 11.1106ms"}
+{"level":"INFO","ts":"2025-03-16T17:50:09.848+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10&role=admin from [::1]:54647"}
+{"level":"INFO","ts":"2025-03-16T17:50:09.853+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10&role=admin in 4.9177ms"}
+{"level":"INFO","ts":"2025-03-16T17:50:10.155+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10 from [::1]:54647"}
+{"level":"INFO","ts":"2025-03-16T17:50:10.162+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10 in 7.2213ms"}
+{"level":"INFO","ts":"2025-03-16T21:47:31.628+0700","caller":"middleware/log.go:24","msg":"Started POST /auth/login from 192.168.51.193:59167"}
+{"level":"INFO","ts":"2025-03-16T21:47:31.709+0700","caller":"middleware/log.go:31","msg":"Completed /auth/login in 80.2216ms"}
+{"level":"INFO","ts":"2025-03-16T21:48:25.272+0700","caller":"middleware/log.go:24","msg":"Started POST /auth/login from 192.168.51.193:59167"}
+{"level":"INFO","ts":"2025-03-16T21:48:25.345+0700","caller":"middleware/log.go:31","msg":"Completed /auth/login in 73.1872ms"}
+{"level":"INFO","ts":"2025-03-16T21:56:15.057+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=1 from 192.168.51.193:59588"}
+{"level":"INFO","ts":"2025-03-16T21:56:15.060+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=1 in 3.1607ms"}
+{"level":"INFO","ts":"2025-03-16T21:56:15.654+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=1 from 192.168.51.193:59588"}
+{"level":"INFO","ts":"2025-03-16T21:56:15.655+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=1 in 1.5628ms"}
+{"level":"INFO","ts":"2025-03-16T21:56:29.684+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10 from 192.168.51.193:59588"}
+{"level":"INFO","ts":"2025-03-16T21:56:29.688+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10 in 4.3457ms"}
+{"level":"INFO","ts":"2025-03-16T21:56:29.692+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10 from 192.168.51.193:59588"}
+{"level":"INFO","ts":"2025-03-16T21:56:29.698+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10 in 5.2115ms"}
+{"level":"INFO","ts":"2025-03-16T21:56:31.708+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=1 from 192.168.51.193:59588"}
+{"level":"INFO","ts":"2025-03-16T21:56:31.710+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=1 in 2.1088ms"}
+{"level":"INFO","ts":"2025-03-16T21:56:31.713+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=1 from 192.168.51.193:59588"}
+{"level":"INFO","ts":"2025-03-16T21:56:31.715+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=1 in 2.6371ms"}
+{"level":"INFO","ts":"2025-03-16T21:56:32.203+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10 from 192.168.51.193:59588"}
+{"level":"INFO","ts":"2025-03-16T21:56:32.208+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10 in 4.8938ms"}
+{"level":"INFO","ts":"2025-03-16T21:56:32.212+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10 from 192.168.51.193:59588"}
+{"level":"INFO","ts":"2025-03-16T21:56:32.217+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10 in 4.9565ms"}
+{"level":"INFO","ts":"2025-03-16T21:56:32.977+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=1 from 192.168.51.193:59588"}
+{"level":"INFO","ts":"2025-03-16T21:56:32.979+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=1 in 2.1112ms"}
+{"level":"INFO","ts":"2025-03-16T21:56:32.993+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=1 from 192.168.51.193:59588"}
+{"level":"INFO","ts":"2025-03-16T21:56:32.995+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=1 in 2.7047ms"}
+{"level":"INFO","ts":"2025-03-16T21:56:33.399+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10 from 192.168.51.193:59588"}
+{"level":"INFO","ts":"2025-03-16T21:56:33.406+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10 in 6.5894ms"}
+{"level":"INFO","ts":"2025-03-16T21:56:33.411+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10 from 192.168.51.193:59588"}
+{"level":"INFO","ts":"2025-03-16T21:56:33.415+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10 in 4.681ms"}
+{"level":"INFO","ts":"2025-03-16T21:56:33.906+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=1 from 192.168.51.193:59588"}
+{"level":"INFO","ts":"2025-03-16T21:56:33.909+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=1 in 2.0929ms"}
+{"level":"INFO","ts":"2025-03-16T21:56:33.913+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=1 from 192.168.51.193:59588"}
+{"level":"INFO","ts":"2025-03-16T21:56:33.916+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=1 in 2.6727ms"}
+{"level":"INFO","ts":"2025-03-16T22:04:24.808+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=1 from 192.168.51.193:60021"}
+{"level":"INFO","ts":"2025-03-16T22:04:24.811+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=1 in 2.6111ms"}
+{"level":"INFO","ts":"2025-03-16T22:04:24.814+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=1 from 192.168.51.193:60020"}
+{"level":"INFO","ts":"2025-03-16T22:04:24.816+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=1 in 2.0984ms"}
+{"level":"INFO","ts":"2025-03-16T22:04:30.136+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10 from 192.168.51.193:60021"}
+{"level":"INFO","ts":"2025-03-16T22:04:30.139+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10 in 2.8007ms"}
+{"level":"INFO","ts":"2025-03-16T22:04:30.152+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10 from 192.168.51.193:60020"}
+{"level":"INFO","ts":"2025-03-16T22:04:30.155+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10 in 2.9429ms"}
+{"level":"INFO","ts":"2025-03-16T22:04:31.852+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10&role=admin from 192.168.51.193:60020"}
+{"level":"INFO","ts":"2025-03-16T22:04:31.857+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10&role=admin in 4.434ms"}
+{"level":"INFO","ts":"2025-03-16T22:04:32.226+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10&role=teacher from 192.168.51.193:60020"}
+{"level":"INFO","ts":"2025-03-16T22:04:32.231+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10&role=teacher in 5.7691ms"}
+{"level":"INFO","ts":"2025-03-16T22:04:32.549+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10&role=student from 192.168.51.193:60020"}
+{"level":"INFO","ts":"2025-03-16T22:04:32.553+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10&role=student in 3.8182ms"}
+{"level":"INFO","ts":"2025-03-16T22:04:32.974+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10&role=teacher from 192.168.51.193:60020"}
+{"level":"INFO","ts":"2025-03-16T22:04:32.978+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10&role=teacher in 3.8739ms"}
+{"level":"INFO","ts":"2025-03-16T22:04:33.389+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10&role=student from 192.168.51.193:60020"}
+{"level":"INFO","ts":"2025-03-16T22:04:33.394+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10&role=student in 4.8812ms"}
+{"level":"INFO","ts":"2025-03-16T22:04:34.077+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10&role=student&status=active from 192.168.51.193:60020"}
+{"level":"INFO","ts":"2025-03-16T22:04:34.085+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10&role=student&status=active in 7.905ms"}
+{"level":"INFO","ts":"2025-03-16T22:04:34.539+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10&role=student from 192.168.51.193:60020"}
+{"level":"INFO","ts":"2025-03-16T22:04:34.543+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10&role=student in 3.7525ms"}
+{"level":"INFO","ts":"2025-03-16T22:04:35.430+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10&role=admin from 192.168.51.193:60020"}
+{"level":"INFO","ts":"2025-03-16T22:04:35.436+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10&role=admin in 6.2368ms"}
+{"level":"INFO","ts":"2025-03-16T22:04:35.984+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10 from 192.168.51.193:60020"}
+{"level":"INFO","ts":"2025-03-16T22:04:35.988+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10 in 3.9987ms"}
+{"level":"INFO","ts":"2025-03-16T22:04:36.421+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10&role=admin from 192.168.51.193:60020"}
+{"level":"INFO","ts":"2025-03-16T22:04:36.430+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10&role=admin in 9.4051ms"}
+{"level":"INFO","ts":"2025-03-16T22:04:37.068+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10 from 192.168.51.193:60020"}
+{"level":"INFO","ts":"2025-03-16T22:04:37.076+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10 in 8.02ms"}
+{"level":"INFO","ts":"2025-03-16T22:04:37.392+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10&role=admin from 192.168.51.193:60020"}
+{"level":"INFO","ts":"2025-03-16T22:04:37.395+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10&role=admin in 3.2597ms"}
+{"level":"INFO","ts":"2025-03-16T22:04:37.741+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10&role=teacher from 192.168.51.193:60020"}
+{"level":"INFO","ts":"2025-03-16T22:04:37.744+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10&role=teacher in 2.075ms"}
+{"level":"INFO","ts":"2025-03-16T22:04:38.230+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10&role=admin from 192.168.51.193:60020"}
+{"level":"INFO","ts":"2025-03-16T22:04:38.233+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10&role=admin in 3.2819ms"}
+{"level":"INFO","ts":"2025-03-16T22:04:38.593+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10&role=teacher from 192.168.51.193:60020"}
+{"level":"INFO","ts":"2025-03-16T22:04:38.601+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10&role=teacher in 7.2777ms"}
+{"level":"INFO","ts":"2025-03-16T22:04:38.949+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10&role=admin from 192.168.51.193:60020"}
+{"level":"INFO","ts":"2025-03-16T22:04:38.959+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10&role=admin in 9.7986ms"}
+{"level":"INFO","ts":"2025-03-16T22:04:39.459+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10 from 192.168.51.193:60020"}
+{"level":"INFO","ts":"2025-03-16T22:04:39.464+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10 in 5.7761ms"}
+{"level":"INFO","ts":"2025-03-16T22:04:42.471+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10 from 192.168.51.193:60021"}
+{"level":"INFO","ts":"2025-03-16T22:04:42.474+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10 in 2.6389ms"}
+{"level":"INFO","ts":"2025-03-16T22:04:42.476+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10 from 192.168.51.193:60020"}
+{"level":"INFO","ts":"2025-03-16T22:04:42.478+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10 in 2.157ms"}
+{"level":"INFO","ts":"2025-03-16T22:04:45.251+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10 from 192.168.51.193:60020"}
+{"level":"INFO","ts":"2025-03-16T22:04:45.254+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10 in 2.7498ms"}
+{"level":"INFO","ts":"2025-03-16T22:04:45.258+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10 from 192.168.51.193:60021"}
+{"level":"INFO","ts":"2025-03-16T22:04:45.262+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10 in 4.1765ms"}
+{"level":"INFO","ts":"2025-03-16T22:07:54.454+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10 from 192.168.51.193:60166"}
+{"level":"INFO","ts":"2025-03-16T22:07:54.457+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10 in 3.902ms"}
+{"level":"INFO","ts":"2025-03-16T22:07:54.461+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10 from 192.168.51.193:60165"}
+{"level":"INFO","ts":"2025-03-16T22:07:54.465+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10 in 3.7276ms"}
+{"level":"INFO","ts":"2025-03-16T22:07:55.454+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=1 from 192.168.51.193:60166"}
+{"level":"INFO","ts":"2025-03-16T22:07:55.456+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=1 in 2.8064ms"}
+{"level":"INFO","ts":"2025-03-16T22:07:55.459+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=1 from 192.168.51.193:60165"}
+{"level":"INFO","ts":"2025-03-16T22:07:55.461+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=1 in 2.1074ms"}
+{"level":"INFO","ts":"2025-03-16T22:07:56.645+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=1 from 192.168.51.193:60165"}
+{"level":"INFO","ts":"2025-03-16T22:07:56.648+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=1 in 2.1599ms"}
+{"level":"INFO","ts":"2025-03-16T22:07:56.662+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=1 from 192.168.51.193:60166"}
+{"level":"INFO","ts":"2025-03-16T22:07:56.668+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=1 in 6.1393ms"}
+{"level":"INFO","ts":"2025-03-16T22:07:56.999+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10 from 192.168.51.193:60166"}
+{"level":"INFO","ts":"2025-03-16T22:07:57.008+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10 in 8.8368ms"}
+{"level":"INFO","ts":"2025-03-16T22:07:57.015+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10 from 192.168.51.193:60165"}
+{"level":"INFO","ts":"2025-03-16T22:07:57.021+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10 in 6.2123ms"}
+{"level":"INFO","ts":"2025-03-16T22:08:32.967+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10 from 192.168.51.193:60165"}
+{"level":"INFO","ts":"2025-03-16T22:08:32.971+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10 in 3.7936ms"}
+{"level":"INFO","ts":"2025-03-16T22:08:32.976+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10 from 192.168.51.193:60166"}
+{"level":"INFO","ts":"2025-03-16T22:08:32.979+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10 in 3.8553ms"}
+{"level":"INFO","ts":"2025-03-16T22:08:34.022+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=1 from 192.168.51.193:60165"}
+{"level":"INFO","ts":"2025-03-16T22:08:34.025+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=1 in 3.1795ms"}
+{"level":"INFO","ts":"2025-03-16T22:08:34.029+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=1 from 192.168.51.193:60166"}
+{"level":"INFO","ts":"2025-03-16T22:08:34.032+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=1 in 2.6844ms"}
+{"level":"INFO","ts":"2025-03-16T22:08:40.847+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10 from 192.168.51.193:60165"}
+{"level":"INFO","ts":"2025-03-16T22:08:40.852+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10 in 4.9217ms"}
+{"level":"INFO","ts":"2025-03-16T22:08:40.856+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10 from 192.168.51.193:60166"}
+{"level":"INFO","ts":"2025-03-16T22:08:40.859+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10 in 2.6194ms"}
+{"level":"INFO","ts":"2025-03-16T22:14:16.381+0700","caller":"cmd/main.go:57","msg":"User service starting","version":"1.0.0"}
+{"level":"INFO","ts":"2025-03-16T22:14:16.403+0700","caller":"cmd/main.go:74","msg":"Successfully connected to database"}
+{"level":"INFO","ts":"2025-03-16T22:14:16.403+0700","caller":"cmd/main.go:115","msg":"Server starting","port":"8083"}
+{"level":"INFO","ts":"2025-03-16T22:14:21.245+0700","caller":"middleware/log.go:24","msg":"Started POST /auth/logout from 192.168.51.193:60461"}
+{"level":"INFO","ts":"2025-03-16T22:14:21.251+0700","caller":"middleware/log.go:31","msg":"Completed /auth/logout in 5.538ms"}
+{"level":"INFO","ts":"2025-03-16T22:14:25.762+0700","caller":"middleware/log.go:24","msg":"Started POST /auth/login from 192.168.51.193:60461"}
+{"level":"ERROR","ts":"2025-03-16T22:14:25.764+0700","caller":"service/user.go:174","msg":"[Service][Validate] failed to get user","error":"pq: column \"full_name\" does not exist"}
+{"level":"ERROR","ts":"2025-03-16T22:14:25.764+0700","caller":"rest/auth.go:107","msg":"[Handler][Login] user not found","error":"user not found"}
+{"level":"INFO","ts":"2025-03-16T22:14:25.764+0700","caller":"middleware/log.go:31","msg":"Completed /auth/login in 1.5805ms"}
+{"level":"INFO","ts":"2025-03-16T22:15:16.980+0700","caller":"cmd/main.go:57","msg":"User service starting","version":"1.0.0"}
+{"level":"INFO","ts":"2025-03-16T22:15:16.999+0700","caller":"cmd/main.go:74","msg":"Successfully connected to database"}
+{"level":"INFO","ts":"2025-03-16T22:15:17.000+0700","caller":"cmd/main.go:115","msg":"Server starting","port":"8083"}
+{"level":"INFO","ts":"2025-03-16T22:15:22.323+0700","caller":"middleware/log.go:24","msg":"Started POST /auth/login from 192.168.51.193:60507"}
+{"level":"ERROR","ts":"2025-03-16T22:15:22.328+0700","caller":"service/user.go:174","msg":"[Service][Validate] failed to get user","error":"missing destination name name in *models.User"}
+{"level":"ERROR","ts":"2025-03-16T22:15:22.328+0700","caller":"rest/auth.go:107","msg":"[Handler][Login] user not found","error":"user not found"}
+{"level":"INFO","ts":"2025-03-16T22:15:22.328+0700","caller":"middleware/log.go:31","msg":"Completed /auth/login in 5.3545ms"}
+{"level":"INFO","ts":"2025-03-16T22:16:11.824+0700","caller":"cmd/main.go:57","msg":"User service starting","version":"1.0.0"}
+{"level":"INFO","ts":"2025-03-16T22:16:11.845+0700","caller":"cmd/main.go:74","msg":"Successfully connected to database"}
+{"level":"INFO","ts":"2025-03-16T22:16:11.845+0700","caller":"cmd/main.go:115","msg":"Server starting","port":"8083"}
+{"level":"INFO","ts":"2025-03-16T22:16:16.116+0700","caller":"middleware/log.go:24","msg":"Started POST /auth/login from 192.168.51.193:60550"}
+{"level":"INFO","ts":"2025-03-16T22:16:16.182+0700","caller":"middleware/log.go:31","msg":"Completed /auth/login in 65.8389ms"}
+{"level":"INFO","ts":"2025-03-16T22:16:47.473+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=1 from 192.168.51.193:60550"}
+{"level":"ERROR","ts":"2025-03-16T22:16:47.474+0700","caller":"service/user.go:160","msg":"[Service][List] failed to list users","error":"failed to query users: pq: column \"full_name\" does not exist"}
+{"level":"ERROR","ts":"2025-03-16T22:16:47.475+0700","caller":"rest/handler.go:251","msg":"[Handler][ListUsers] failed to list users","error":"failed to list users"}
+{"level":"INFO","ts":"2025-03-16T22:16:47.475+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=1 in 2.0936ms"}
+{"level":"INFO","ts":"2025-03-16T22:17:14.425+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10 from 192.168.51.193:60610"}
+{"level":"ERROR","ts":"2025-03-16T22:17:14.426+0700","caller":"service/user.go:160","msg":"[Service][List] failed to list users","error":"failed to query users: pq: column \"full_name\" does not exist"}
+{"level":"ERROR","ts":"2025-03-16T22:17:14.426+0700","caller":"rest/handler.go:251","msg":"[Handler][ListUsers] failed to list users","error":"failed to list users"}
+{"level":"INFO","ts":"2025-03-16T22:17:14.427+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10 in 2.4005ms"}
+{"level":"INFO","ts":"2025-03-16T22:17:14.430+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10 from 192.168.51.193:60610"}
+{"level":"ERROR","ts":"2025-03-16T22:17:14.431+0700","caller":"service/user.go:160","msg":"[Service][List] failed to list users","error":"failed to query users: pq: column \"full_name\" does not exist"}
+{"level":"ERROR","ts":"2025-03-16T22:17:14.432+0700","caller":"rest/handler.go:251","msg":"[Handler][ListUsers] failed to list users","error":"failed to list users"}
+{"level":"INFO","ts":"2025-03-16T22:17:14.432+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10 in 2.1057ms"}
+{"level":"INFO","ts":"2025-03-16T22:18:11.058+0700","caller":"cmd/main.go:57","msg":"User service starting","version":"1.0.0"}
+{"level":"INFO","ts":"2025-03-16T22:18:11.079+0700","caller":"cmd/main.go:74","msg":"Successfully connected to database"}
+{"level":"INFO","ts":"2025-03-16T22:18:11.079+0700","caller":"cmd/main.go:115","msg":"Server starting","port":"8083"}
+{"level":"INFO","ts":"2025-03-16T22:18:12.742+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10 from 192.168.51.193:60650"}
+{"level":"INFO","ts":"2025-03-16T22:18:12.745+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10 in 3.1468ms"}
+{"level":"INFO","ts":"2025-03-16T22:19:49.777+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10 from 192.168.51.193:60709"}
+{"level":"INFO","ts":"2025-03-16T22:19:49.785+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10 in 7.8201ms"}
+{"level":"INFO","ts":"2025-03-16T22:19:52.398+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10 from 192.168.51.193:60709"}
+{"level":"INFO","ts":"2025-03-16T22:19:52.401+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10 in 2.6763ms"}
+{"level":"INFO","ts":"2025-03-16T22:19:52.407+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10 from 192.168.51.193:60709"}
+{"level":"INFO","ts":"2025-03-16T22:19:52.411+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10 in 4.1557ms"}
+{"level":"INFO","ts":"2025-03-16T22:19:56.977+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10 from 192.168.51.193:60722"}
+{"level":"INFO","ts":"2025-03-16T22:19:56.980+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10 in 2.8277ms"}
+{"level":"INFO","ts":"2025-03-16T22:19:56.984+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10 from 192.168.51.193:60722"}
+{"level":"INFO","ts":"2025-03-16T22:19:56.987+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10 in 3.8942ms"}
+{"level":"INFO","ts":"2025-03-16T22:19:57.892+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10 from 192.168.51.193:60722"}
+{"level":"INFO","ts":"2025-03-16T22:19:57.894+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10 in 2.6676ms"}
+{"level":"INFO","ts":"2025-03-16T22:19:57.898+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10 from 192.168.51.193:60722"}
+{"level":"INFO","ts":"2025-03-16T22:19:57.901+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10 in 2.8454ms"}
+{"level":"INFO","ts":"2025-03-16T22:19:58.717+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10 from 192.168.51.193:60722"}
+{"level":"INFO","ts":"2025-03-16T22:19:58.719+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10 in 2.0649ms"}
+{"level":"INFO","ts":"2025-03-16T22:19:58.723+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10 from 192.168.51.193:60722"}
+{"level":"INFO","ts":"2025-03-16T22:19:58.726+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10 in 2.6829ms"}
+{"level":"INFO","ts":"2025-03-16T22:20:49.696+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10 from 192.168.51.193:60709"}
+{"level":"INFO","ts":"2025-03-16T22:20:49.699+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10 in 2.6339ms"}
+{"level":"INFO","ts":"2025-03-16T22:20:49.702+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10 from 192.168.51.193:60709"}
+{"level":"INFO","ts":"2025-03-16T22:20:49.705+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10 in 2.6538ms"}
+{"level":"INFO","ts":"2025-03-16T22:21:29.155+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10 from 192.168.51.193:60722"}
+{"level":"INFO","ts":"2025-03-16T22:21:29.158+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10 in 3.1524ms"}
+{"level":"INFO","ts":"2025-03-16T22:21:29.162+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10 from 192.168.51.193:60722"}
+{"level":"INFO","ts":"2025-03-16T22:21:29.164+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10 in 2.6291ms"}
+{"level":"INFO","ts":"2025-03-16T22:22:31.277+0700","caller":"cmd/main.go:57","msg":"User service starting","version":"1.0.0"}
+{"level":"INFO","ts":"2025-03-16T22:22:31.294+0700","caller":"cmd/main.go:74","msg":"Successfully connected to database"}
+{"level":"INFO","ts":"2025-03-16T22:22:31.294+0700","caller":"cmd/main.go:115","msg":"Server starting","port":"8083"}
+{"level":"INFO","ts":"2025-03-16T22:22:33.354+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10 from 192.168.51.193:60920"}
+{"level":"INFO","ts":"2025-03-16T22:22:33.358+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10 in 3.7159ms"}
+{"level":"INFO","ts":"2025-03-16T22:22:33.360+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10 from 192.168.51.193:60920"}
+{"level":"INFO","ts":"2025-03-16T22:22:33.363+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10 in 2.6829ms"}
+{"level":"INFO","ts":"2025-03-16T22:22:39.791+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10 from 192.168.51.193:60920"}
+{"level":"INFO","ts":"2025-03-16T22:22:39.794+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10 in 3.1553ms"}
+{"level":"INFO","ts":"2025-03-16T22:22:39.797+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10 from 192.168.51.193:60920"}
+{"level":"INFO","ts":"2025-03-16T22:22:39.799+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10 in 2.6545ms"}
+{"level":"INFO","ts":"2025-03-16T22:22:41.722+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10 from 192.168.51.193:60920"}
+{"level":"INFO","ts":"2025-03-16T22:22:41.727+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10 in 4.3829ms"}
+{"level":"INFO","ts":"2025-03-16T22:22:41.731+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10 from 192.168.51.193:60920"}
+{"level":"INFO","ts":"2025-03-16T22:22:41.734+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10 in 3.6314ms"}
+{"level":"INFO","ts":"2025-03-16T22:26:43.632+0700","caller":"middleware/log.go:24","msg":"Started POST /auth/logout from 192.168.51.193:61203"}
+{"level":"INFO","ts":"2025-03-16T22:26:43.638+0700","caller":"middleware/log.go:31","msg":"Completed /auth/logout in 5.6815ms"}
+{"level":"INFO","ts":"2025-03-16T22:26:52.911+0700","caller":"middleware/log.go:24","msg":"Started POST /auth/login from 192.168.51.193:61203"}
+{"level":"INFO","ts":"2025-03-16T22:26:52.983+0700","caller":"middleware/log.go:31","msg":"Completed /auth/login in 71.9034ms"}
+{"level":"INFO","ts":"2025-03-16T22:26:53.083+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=1 from 192.168.51.193:61203"}
+{"level":"INFO","ts":"2025-03-16T22:26:53.085+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=1 in 2.128ms"}
+{"level":"INFO","ts":"2025-03-16T22:26:53.088+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=1 from 192.168.51.193:61203"}
+{"level":"INFO","ts":"2025-03-16T22:26:53.090+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=1 in 2.1665ms"}
+{"level":"INFO","ts":"2025-03-16T22:27:07.521+0700","caller":"middleware/log.go:24","msg":"Started POST /auth/logout from 192.168.51.193:61203"}
+{"level":"INFO","ts":"2025-03-16T22:27:07.526+0700","caller":"middleware/log.go:31","msg":"Completed /auth/logout in 5.2417ms"}
+{"level":"INFO","ts":"2025-03-16T22:27:23.773+0700","caller":"middleware/log.go:24","msg":"Started POST /auth/login from 192.168.51.193:61203"}
+{"level":"INFO","ts":"2025-03-16T22:27:23.849+0700","caller":"middleware/log.go:31","msg":"Completed /auth/login in 76.7218ms"}
+{"level":"INFO","ts":"2025-03-16T22:27:23.935+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=1 from 192.168.51.193:61203"}
+{"level":"INFO","ts":"2025-03-16T22:27:23.938+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=1 in 2.5727ms"}
+{"level":"INFO","ts":"2025-03-16T22:27:23.941+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=1 from 192.168.51.193:61203"}
+{"level":"INFO","ts":"2025-03-16T22:27:23.944+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=1 in 2.6176ms"}
+{"level":"INFO","ts":"2025-03-16T22:28:21.914+0700","caller":"middleware/log.go:24","msg":"Started POST /auth/logout from 192.168.51.193:61203"}
+{"level":"INFO","ts":"2025-03-16T22:28:21.920+0700","caller":"middleware/log.go:31","msg":"Completed /auth/logout in 5.8472ms"}
+{"level":"INFO","ts":"2025-03-16T22:29:42.068+0700","caller":"middleware/log.go:24","msg":"Started POST /auth/login from 192.168.51.193:61520"}
+{"level":"INFO","ts":"2025-03-16T22:29:42.135+0700","caller":"middleware/log.go:31","msg":"Completed /auth/login in 67.2012ms"}
+{"level":"INFO","ts":"2025-03-16T22:29:42.244+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=1 from 192.168.51.193:61520"}
+{"level":"INFO","ts":"2025-03-16T22:29:42.246+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=1 in 2.6073ms"}
+{"level":"INFO","ts":"2025-03-16T22:29:42.250+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=1 from 192.168.51.193:61520"}
+{"level":"INFO","ts":"2025-03-16T22:29:42.252+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=1 in 2.1311ms"}
+{"level":"INFO","ts":"2025-03-16T22:29:51.032+0700","caller":"middleware/log.go:24","msg":"Started POST /auth/logout from 192.168.51.193:61520"}
+{"level":"INFO","ts":"2025-03-16T22:29:51.036+0700","caller":"middleware/log.go:31","msg":"Completed /auth/logout in 4.208ms"}
+{"level":"INFO","ts":"2025-03-16T22:30:46.916+0700","caller":"middleware/log.go:24","msg":"Started POST /auth/login from 192.168.51.193:61520"}
+{"level":"INFO","ts":"2025-03-16T22:30:46.983+0700","caller":"middleware/log.go:31","msg":"Completed /auth/login in 66.622ms"}
+{"level":"INFO","ts":"2025-03-16T22:30:47.078+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=1 from 192.168.51.193:61520"}
+{"level":"INFO","ts":"2025-03-16T22:30:47.081+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=1 in 3.1673ms"}
+{"level":"INFO","ts":"2025-03-16T22:30:47.084+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=1 from 192.168.51.193:61520"}
+{"level":"INFO","ts":"2025-03-16T22:30:47.087+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=1 in 2.6584ms"}
+{"level":"INFO","ts":"2025-03-16T22:37:53.359+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10 from 192.168.51.193:61908"}
+{"level":"INFO","ts":"2025-03-16T22:37:53.366+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10 in 7.711ms"}
+{"level":"INFO","ts":"2025-03-16T22:37:53.371+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10 from 192.168.51.193:61908"}
+{"level":"INFO","ts":"2025-03-16T22:37:53.375+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10 in 4.3868ms"}
+{"level":"INFO","ts":"2025-03-16T22:37:54.264+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=1 from 192.168.51.193:61908"}
+{"level":"INFO","ts":"2025-03-16T22:37:54.267+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=1 in 2.6237ms"}
+{"level":"INFO","ts":"2025-03-16T22:37:54.296+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=1 from 192.168.51.193:61908"}
+{"level":"INFO","ts":"2025-03-16T22:37:54.299+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=1 in 2.8489ms"}
+{"level":"INFO","ts":"2025-03-16T22:59:38.867+0700","caller":"middleware/log.go:24","msg":"Started POST /auth/refresh from 192.168.51.193:62810"}
+{"level":"INFO","ts":"2025-03-16T22:59:38.867+0700","caller":"middleware/log.go:24","msg":"Started POST /auth/refresh from 192.168.51.193:62809"}
+{"level":"ERROR","ts":"2025-03-16T22:59:38.870+0700","caller":"service/auth.go:96","msg":"[AuthService][RefreshToken] failed to get refresh token","error":"missing destination name user_id in *models.RefreshTokenData"}
+{"level":"ERROR","ts":"2025-03-16T22:59:38.870+0700","caller":"rest/auth.go:312","msg":"[Handler][RefreshToken] failed to refresh token","error":"missing destination name user_id in *models.RefreshTokenData"}
+{"level":"INFO","ts":"2025-03-16T22:59:38.870+0700","caller":"middleware/log.go:31","msg":"Completed /auth/refresh in 3.6376ms"}
+{"level":"ERROR","ts":"2025-03-16T22:59:38.889+0700","caller":"service/auth.go:96","msg":"[AuthService][RefreshToken] failed to get refresh token","error":"missing destination name user_id in *models.RefreshTokenData"}
+{"level":"ERROR","ts":"2025-03-16T22:59:38.889+0700","caller":"rest/auth.go:312","msg":"[Handler][RefreshToken] failed to refresh token","error":"missing destination name user_id in *models.RefreshTokenData"}
+{"level":"INFO","ts":"2025-03-16T22:59:38.889+0700","caller":"middleware/log.go:31","msg":"Completed /auth/refresh in 22.2854ms"}
+{"level":"INFO","ts":"2025-03-16T22:59:38.893+0700","caller":"middleware/log.go:24","msg":"Started POST /auth/logout from 192.168.51.193:62810"}
+{"level":"INFO","ts":"2025-03-16T22:59:38.898+0700","caller":"middleware/log.go:31","msg":"Completed /auth/logout in 4.8041ms"}
+{"level":"INFO","ts":"2025-03-16T22:59:43.596+0700","caller":"middleware/log.go:24","msg":"Started POST /auth/login from 192.168.51.193:62810"}
+{"level":"INFO","ts":"2025-03-16T22:59:43.664+0700","caller":"middleware/log.go:31","msg":"Completed /auth/login in 68.1132ms"}
+{"level":"INFO","ts":"2025-03-16T22:59:43.746+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=1 from 192.168.51.193:62810"}
+{"level":"INFO","ts":"2025-03-16T22:59:43.749+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=1 in 2.6173ms"}
+{"level":"INFO","ts":"2025-03-16T22:59:43.751+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=1 from 192.168.51.193:62810"}
+{"level":"INFO","ts":"2025-03-16T22:59:43.754+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=1 in 3.2916ms"}
+{"level":"INFO","ts":"2025-03-16T23:25:20.173+0700","caller":"middleware/log.go:24","msg":"Started POST /auth/refresh from 192.168.51.193:63891"}
+{"level":"INFO","ts":"2025-03-16T23:25:20.173+0700","caller":"middleware/log.go:24","msg":"Started POST /auth/refresh from 192.168.51.193:63892"}
+{"level":"ERROR","ts":"2025-03-16T23:25:20.176+0700","caller":"service/auth.go:96","msg":"[AuthService][RefreshToken] failed to get refresh token","error":"missing destination name user_id in *models.RefreshTokenData"}
+{"level":"ERROR","ts":"2025-03-16T23:25:20.176+0700","caller":"rest/auth.go:312","msg":"[Handler][RefreshToken] failed to refresh token","error":"missing destination name user_id in *models.RefreshTokenData"}
+{"level":"INFO","ts":"2025-03-16T23:25:20.176+0700","caller":"middleware/log.go:31","msg":"Completed /auth/refresh in 2.6292ms"}
+{"level":"ERROR","ts":"2025-03-16T23:25:20.177+0700","caller":"service/auth.go:96","msg":"[AuthService][RefreshToken] failed to get refresh token","error":"missing destination name user_id in *models.RefreshTokenData"}
+{"level":"ERROR","ts":"2025-03-16T23:25:20.177+0700","caller":"rest/auth.go:312","msg":"[Handler][RefreshToken] failed to refresh token","error":"missing destination name user_id in *models.RefreshTokenData"}
+{"level":"INFO","ts":"2025-03-16T23:25:20.177+0700","caller":"middleware/log.go:31","msg":"Completed /auth/refresh in 3.1468ms"}
+{"level":"INFO","ts":"2025-03-16T23:25:20.250+0700","caller":"middleware/log.go:24","msg":"Started POST /auth/logout from 192.168.51.193:63891"}
+{"level":"INFO","ts":"2025-03-16T23:25:20.255+0700","caller":"middleware/log.go:31","msg":"Completed /auth/logout in 5.3235ms"}
+{"level":"INFO","ts":"2025-03-16T23:25:26.916+0700","caller":"middleware/log.go:24","msg":"Started POST /auth/login from 192.168.51.193:63892"}
+{"level":"INFO","ts":"2025-03-16T23:25:26.982+0700","caller":"middleware/log.go:31","msg":"Completed /auth/login in 65.4435ms"}
+{"level":"INFO","ts":"2025-03-16T23:25:27.060+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=1 from 192.168.51.193:63891"}
+{"level":"INFO","ts":"2025-03-16T23:25:27.062+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=1 in 2.1104ms"}
+{"level":"INFO","ts":"2025-03-16T23:25:27.065+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=1 from 192.168.51.193:63892"}
+{"level":"INFO","ts":"2025-03-16T23:25:27.067+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=1 in 2.2474ms"}
+{"level":"INFO","ts":"2025-03-16T23:55:58.541+0700","caller":"middleware/log.go:24","msg":"Started POST /auth/logout from 192.168.51.193:65403"}
+{"level":"INFO","ts":"2025-03-16T23:55:58.555+0700","caller":"middleware/log.go:31","msg":"Completed /auth/logout in 14.1574ms"}
+{"level":"INFO","ts":"2025-03-16T23:56:04.725+0700","caller":"middleware/log.go:24","msg":"Started POST /auth/login from 192.168.51.193:65403"}
+{"level":"INFO","ts":"2025-03-16T23:56:04.790+0700","caller":"middleware/log.go:31","msg":"Completed /auth/login in 65.5728ms"}
+{"level":"INFO","ts":"2025-03-16T23:56:04.879+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=1 from 192.168.51.193:65416"}
+{"level":"INFO","ts":"2025-03-16T23:56:04.881+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=1 in 2.1178ms"}
+{"level":"INFO","ts":"2025-03-16T23:56:04.884+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=1 from 192.168.51.193:65403"}
+{"level":"INFO","ts":"2025-03-16T23:56:04.887+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=1 in 2.6557ms"}
+{"level":"INFO","ts":"2025-03-16T23:56:11.030+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=1 from 192.168.51.193:65403"}
+{"level":"INFO","ts":"2025-03-16T23:56:11.032+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=1 in 2.1276ms"}
+{"level":"INFO","ts":"2025-03-16T23:56:11.061+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=1 from 192.168.51.193:65416"}
+{"level":"INFO","ts":"2025-03-16T23:56:11.062+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=1 in 1.5592ms"}
+{"level":"INFO","ts":"2025-03-17T00:08:31.612+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10 from 192.168.51.193:49731"}
+{"level":"INFO","ts":"2025-03-17T00:08:31.617+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10 in 5.3515ms"}
+{"level":"INFO","ts":"2025-03-17T00:08:31.622+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10 from 192.168.51.193:49730"}
+{"level":"INFO","ts":"2025-03-17T00:08:31.627+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10 in 5.1747ms"}
+{"level":"INFO","ts":"2025-03-17T00:09:26.977+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=1 from 192.168.51.193:49731"}
+{"level":"INFO","ts":"2025-03-17T00:09:26.980+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=1 in 2.6209ms"}
+{"level":"INFO","ts":"2025-03-17T00:09:26.982+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=1 from 192.168.51.193:49730"}
+{"level":"INFO","ts":"2025-03-17T00:09:26.985+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=1 in 2.6783ms"}
+{"level":"INFO","ts":"2025-03-17T00:09:30.031+0700","caller":"middleware/log.go:24","msg":"Started POST /auth/logout from 192.168.51.193:49730"}
+{"level":"INFO","ts":"2025-03-17T00:09:30.038+0700","caller":"middleware/log.go:31","msg":"Completed /auth/logout in 7.1142ms"}
+{"level":"INFO","ts":"2025-03-17T00:09:58.097+0700","caller":"middleware/log.go:24","msg":"Started POST /auth/login from 192.168.51.193:49730"}
+{"level":"ERROR","ts":"2025-03-17T00:09:58.156+0700","caller":"service/user.go:179","msg":"[Service][Validate] invalid password","error":"crypto/bcrypt: hashedPassword is not the hash of the given password"}
+{"level":"ERROR","ts":"2025-03-17T00:09:58.156+0700","caller":"rest/auth.go:116","msg":"[Handler][Login] failed to login","error":"invalid email or password"}
+{"level":"INFO","ts":"2025-03-17T00:09:58.157+0700","caller":"middleware/log.go:31","msg":"Completed /auth/login in 60.1099ms"}
+{"level":"INFO","ts":"2025-03-17T00:10:08.303+0700","caller":"middleware/log.go:24","msg":"Started POST /auth/login from 192.168.51.193:49730"}
+{"level":"ERROR","ts":"2025-03-17T00:10:08.361+0700","caller":"service/user.go:179","msg":"[Service][Validate] invalid password","error":"crypto/bcrypt: hashedPassword is not the hash of the given password"}
+{"level":"ERROR","ts":"2025-03-17T00:10:08.361+0700","caller":"rest/auth.go:116","msg":"[Handler][Login] failed to login","error":"invalid email or password"}
+{"level":"INFO","ts":"2025-03-17T00:10:08.362+0700","caller":"middleware/log.go:31","msg":"Completed /auth/login in 58.7567ms"}
+{"level":"INFO","ts":"2025-03-17T00:10:16.375+0700","caller":"middleware/log.go:24","msg":"Started POST /auth/login from 192.168.51.193:49730"}
+{"level":"INFO","ts":"2025-03-17T00:10:16.449+0700","caller":"middleware/log.go:31","msg":"Completed /auth/login in 73.8361ms"}
+{"level":"INFO","ts":"2025-03-17T00:10:16.576+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=1 from 192.168.51.193:49731"}
+{"level":"INFO","ts":"2025-03-17T00:10:16.580+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=1 in 3.2614ms"}
+{"level":"INFO","ts":"2025-03-17T00:10:16.583+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=1 from 192.168.51.193:49730"}
+{"level":"INFO","ts":"2025-03-17T00:10:16.586+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=1 in 3.2337ms"}
+{"level":"INFO","ts":"2025-03-17T00:10:23.589+0700","caller":"middleware/log.go:24","msg":"Started POST /auth/logout from 192.168.51.193:49730"}
+{"level":"INFO","ts":"2025-03-17T00:10:23.603+0700","caller":"middleware/log.go:31","msg":"Completed /auth/logout in 13.5106ms"}
+{"level":"INFO","ts":"2025-03-17T00:10:32.814+0700","caller":"middleware/log.go:24","msg":"Started POST /auth/login from 192.168.51.193:49730"}
+{"level":"INFO","ts":"2025-03-17T00:10:32.902+0700","caller":"middleware/log.go:31","msg":"Completed /auth/login in 87.118ms"}
+{"level":"INFO","ts":"2025-03-17T00:11:07.759+0700","caller":"middleware/log.go:24","msg":"Started GET /users/6 from 192.168.51.193:49731"}
+{"level":"INFO","ts":"2025-03-17T00:11:07.762+0700","caller":"middleware/log.go:31","msg":"Completed /users/6 in 2.6825ms"}
+{"level":"INFO","ts":"2025-03-17T00:11:07.764+0700","caller":"middleware/log.go:24","msg":"Started GET /users/6 from 192.168.51.193:49730"}
+{"level":"INFO","ts":"2025-03-17T00:11:07.766+0700","caller":"middleware/log.go:31","msg":"Completed /users/6 in 2.1333ms"}
+{"level":"INFO","ts":"2025-03-17T00:11:48.294+0700","caller":"middleware/log.go:24","msg":"Started POST /auth/logout from 192.168.51.193:49731"}
+{"level":"INFO","ts":"2025-03-17T00:11:48.299+0700","caller":"middleware/log.go:31","msg":"Completed /auth/logout in 4.7486ms"}
+{"level":"INFO","ts":"2025-03-17T00:11:58.403+0700","caller":"middleware/log.go:24","msg":"Started POST /auth/login from 192.168.51.193:49731"}
+{"level":"INFO","ts":"2025-03-17T00:11:58.485+0700","caller":"middleware/log.go:31","msg":"Completed /auth/login in 82.4035ms"}
+{"level":"INFO","ts":"2025-03-17T00:12:12.011+0700","caller":"middleware/log.go:24","msg":"Started POST /auth/logout from 192.168.51.193:50177"}
+{"level":"INFO","ts":"2025-03-17T00:12:12.026+0700","caller":"middleware/log.go:31","msg":"Completed /auth/logout in 15.1409ms"}
+{"level":"INFO","ts":"2025-03-17T00:13:13.462+0700","caller":"middleware/log.go:24","msg":"Started POST /auth/login from 192.168.51.193:50222"}
+{"level":"INFO","ts":"2025-03-17T00:13:13.534+0700","caller":"middleware/log.go:31","msg":"Completed /auth/login in 72.8405ms"}
+{"level":"INFO","ts":"2025-03-17T00:15:25.027+0700","caller":"middleware/log.go:24","msg":"Started POST /auth/logout from 192.168.51.193:50550"}
+{"level":"ERROR","ts":"2025-03-17T00:15:25.030+0700","caller":"service/auth.go:142","msg":"[AuthService][Logout] failed to revoke token","error":"context canceled"}
+{"level":"ERROR","ts":"2025-03-17T00:15:25.031+0700","caller":"rest/auth.go:356","msg":"[Handler][Logout] failed to logout","error":"context canceled"}
+{"level":"INFO","ts":"2025-03-17T00:15:25.031+0700","caller":"middleware/log.go:31","msg":"Completed /auth/logout in 3.5524ms"}
+{"level":"INFO","ts":"2025-03-17T00:15:32.690+0700","caller":"middleware/log.go:24","msg":"Started POST /auth/login from 192.168.51.193:50562"}
+{"level":"INFO","ts":"2025-03-17T00:15:32.768+0700","caller":"middleware/log.go:31","msg":"Completed /auth/login in 77.2737ms"}
+{"level":"INFO","ts":"2025-03-17T00:15:32.855+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=1 from 192.168.51.193:50562"}
+{"level":"INFO","ts":"2025-03-17T00:15:32.858+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=1 in 2.6316ms"}
+{"level":"INFO","ts":"2025-03-17T00:15:32.860+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=1 from 192.168.51.193:50562"}
+{"level":"INFO","ts":"2025-03-17T00:15:32.862+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=1 in 2.0915ms"}
+{"level":"INFO","ts":"2025-03-17T00:15:38.405+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10 from 192.168.51.193:50568"}
+{"level":"INFO","ts":"2025-03-17T00:15:38.408+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10 in 2.6737ms"}
+{"level":"INFO","ts":"2025-03-17T00:15:38.411+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10 from 192.168.51.193:50568"}
+{"level":"INFO","ts":"2025-03-17T00:15:38.414+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10 in 2.9331ms"}
+{"level":"INFO","ts":"2025-03-17T00:15:40.885+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10 from 192.168.51.193:50568"}
+{"level":"INFO","ts":"2025-03-17T00:15:40.891+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10 in 6.3399ms"}
+{"level":"INFO","ts":"2025-03-17T00:15:40.896+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10 from 192.168.51.193:50568"}
+{"level":"INFO","ts":"2025-03-17T00:15:40.901+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10 in 5.4563ms"}
+{"level":"INFO","ts":"2025-03-17T00:15:45.800+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=1 from 192.168.51.193:50568"}
+{"level":"INFO","ts":"2025-03-17T00:15:45.802+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=1 in 2.2573ms"}
+{"level":"INFO","ts":"2025-03-17T00:15:45.805+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=1 from 192.168.51.193:50568"}
+{"level":"INFO","ts":"2025-03-17T00:15:45.807+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=1 in 2.1857ms"}
+{"level":"INFO","ts":"2025-03-17T00:16:21.398+0700","caller":"middleware/log.go:24","msg":"Started POST /auth/login from 192.168.51.193:50568"}
+{"level":"INFO","ts":"2025-03-17T00:16:21.460+0700","caller":"middleware/log.go:31","msg":"Completed /auth/login in 61.5413ms"}
+{"level":"INFO","ts":"2025-03-17T00:16:21.527+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=1 from 192.168.51.193:50568"}
+{"level":"INFO","ts":"2025-03-17T00:16:21.529+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=1 in 2.1359ms"}
+{"level":"INFO","ts":"2025-03-17T00:16:21.532+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=1 from 192.168.51.193:50568"}
+{"level":"INFO","ts":"2025-03-17T00:16:21.534+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=1 in 2.105ms"}
+{"level":"INFO","ts":"2025-03-17T00:16:22.884+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10 from 192.168.51.193:50562"}
+{"level":"INFO","ts":"2025-03-17T00:16:22.891+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10 in 6.1652ms"}
+{"level":"INFO","ts":"2025-03-17T00:16:22.895+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10 from 192.168.51.193:50562"}
+{"level":"INFO","ts":"2025-03-17T00:16:22.898+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10 in 3.1715ms"}
+{"level":"INFO","ts":"2025-03-17T00:16:24.721+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10 from 192.168.51.193:50562"}
+{"level":"INFO","ts":"2025-03-17T00:16:24.725+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10 in 4.0452ms"}
+{"level":"INFO","ts":"2025-03-17T00:16:24.729+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10 from 192.168.51.193:50562"}
+{"level":"INFO","ts":"2025-03-17T00:16:24.732+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10 in 3.1818ms"}
+{"level":"INFO","ts":"2025-03-17T00:17:14.643+0700","caller":"middleware/log.go:24","msg":"Started POST /auth/logout from 192.168.51.193:50562"}
+{"level":"INFO","ts":"2025-03-17T00:17:14.659+0700","caller":"middleware/log.go:31","msg":"Completed /auth/logout in 16.1419ms"}
+{"level":"INFO","ts":"2025-03-17T00:17:21.216+0700","caller":"middleware/log.go:24","msg":"Started POST /auth/login from 192.168.51.193:50562"}
+{"level":"INFO","ts":"2025-03-17T00:17:21.290+0700","caller":"middleware/log.go:31","msg":"Completed /auth/login in 73.8505ms"}
+{"level":"INFO","ts":"2025-03-17T00:18:41.777+0700","caller":"middleware/log.go:24","msg":"Started POST /auth/logout from 192.168.51.193:50699"}
+{"level":"INFO","ts":"2025-03-17T00:18:41.783+0700","caller":"middleware/log.go:31","msg":"Completed /auth/logout in 6.0935ms"}
+{"level":"INFO","ts":"2025-03-17T00:18:48.022+0700","caller":"middleware/log.go:24","msg":"Started POST /auth/login from 192.168.51.193:50699"}
+{"level":"INFO","ts":"2025-03-17T00:18:48.089+0700","caller":"middleware/log.go:31","msg":"Completed /auth/login in 67.0883ms"}
+{"level":"INFO","ts":"2025-03-17T00:19:26.195+0700","caller":"middleware/log.go:24","msg":"Started POST /auth/logout from 192.168.51.193:50699"}
+{"level":"INFO","ts":"2025-03-17T00:19:26.211+0700","caller":"middleware/log.go:31","msg":"Completed /auth/logout in 15.3214ms"}
+{"level":"INFO","ts":"2025-03-17T00:19:30.306+0700","caller":"middleware/log.go:24","msg":"Started POST /auth/login from 192.168.51.193:50699"}
+{"level":"INFO","ts":"2025-03-17T00:19:30.373+0700","caller":"middleware/log.go:31","msg":"Completed /auth/login in 67.1847ms"}
+{"level":"INFO","ts":"2025-03-17T00:19:42.385+0700","caller":"middleware/log.go:24","msg":"Started POST /auth/logout from 192.168.51.193:50699"}
+{"level":"INFO","ts":"2025-03-17T00:19:42.400+0700","caller":"middleware/log.go:31","msg":"Completed /auth/logout in 14.4876ms"}
+{"level":"INFO","ts":"2025-03-17T00:19:47.721+0700","caller":"middleware/log.go:24","msg":"Started POST /auth/login from 192.168.51.193:50699"}
+{"level":"INFO","ts":"2025-03-17T00:19:47.795+0700","caller":"middleware/log.go:31","msg":"Completed /auth/login in 74.1127ms"}
+{"level":"INFO","ts":"2025-03-17T00:19:55.312+0700","caller":"middleware/log.go:24","msg":"Started POST /auth/logout from 192.168.51.193:50699"}
+{"level":"INFO","ts":"2025-03-17T00:19:55.327+0700","caller":"middleware/log.go:31","msg":"Completed /auth/logout in 14.6335ms"}
+{"level":"INFO","ts":"2025-03-17T00:19:58.793+0700","caller":"middleware/log.go:24","msg":"Started POST /auth/login from 192.168.51.193:50699"}
+{"level":"INFO","ts":"2025-03-17T00:19:58.868+0700","caller":"middleware/log.go:31","msg":"Completed /auth/login in 74.9145ms"}
+{"level":"INFO","ts":"2025-03-17T00:20:51.868+0700","caller":"middleware/log.go:24","msg":"Started POST /auth/login from 192.168.51.193:50699"}
+{"level":"INFO","ts":"2025-03-17T00:20:51.930+0700","caller":"middleware/log.go:31","msg":"Completed /auth/login in 62.256ms"}
+{"level":"INFO","ts":"2025-03-17T00:22:16.372+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=1 from 192.168.51.193:50933"}
+{"level":"INFO","ts":"2025-03-17T00:22:16.374+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=1 in 2.1269ms"}
+{"level":"INFO","ts":"2025-03-17T00:22:16.377+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=1 from 192.168.51.193:50933"}
+{"level":"INFO","ts":"2025-03-17T00:22:16.379+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=1 in 2.1052ms"}
+{"level":"INFO","ts":"2025-03-17T00:22:38.802+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10 from 192.168.51.193:50949"}
+{"level":"INFO","ts":"2025-03-17T00:22:38.806+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10 in 3.9862ms"}
+{"level":"INFO","ts":"2025-03-17T00:22:38.809+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10 from 192.168.51.193:50949"}
+{"level":"INFO","ts":"2025-03-17T00:22:38.812+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10 in 3.2763ms"}
+{"level":"INFO","ts":"2025-03-17T00:22:42.599+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10 from 192.168.51.193:50949"}
+{"level":"INFO","ts":"2025-03-17T00:22:42.603+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10 in 4.0229ms"}
+{"level":"INFO","ts":"2025-03-17T00:22:42.607+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10 from 192.168.51.193:50949"}
+{"level":"INFO","ts":"2025-03-17T00:22:42.610+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10 in 3.4711ms"}
+{"level":"INFO","ts":"2025-03-17T00:22:43.662+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10 from 192.168.51.193:50949"}
+{"level":"INFO","ts":"2025-03-17T00:22:43.665+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10 in 3.2728ms"}
+{"level":"INFO","ts":"2025-03-17T00:22:43.669+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10 from 192.168.51.193:50949"}
+{"level":"INFO","ts":"2025-03-17T00:22:43.672+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10 in 2.1103ms"}
+{"level":"INFO","ts":"2025-03-17T00:22:44.713+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10 from 192.168.51.193:50949"}
+{"level":"INFO","ts":"2025-03-17T00:22:44.718+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10 in 4.8832ms"}
+{"level":"INFO","ts":"2025-03-17T00:22:44.722+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10 from 192.168.51.193:50949"}
+{"level":"INFO","ts":"2025-03-17T00:22:44.725+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10 in 2.6711ms"}
