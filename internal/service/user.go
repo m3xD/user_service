@@ -3,7 +3,6 @@ package service
 import (
 	"context"
 	"errors"
-	"github.com/google/uuid"
 	"go.uber.org/zap"
 	"golang.org/x/crypto/bcrypt"
 	"time"
@@ -56,20 +55,26 @@ func (s userService) Create(ctx context.Context, input models.CreateUserInput) (
 	}
 
 	user := &models.User{
-		ID:        uuid.New().String(),
 		Email:     input.Email,
 		Password:  string(hashedPassword),
 		FullName:  input.FullName,
 		Role:      input.Role,
-		Phone:     input.Phone,
+		Phone:     "default",
 		Avatar:    "default.jpg", // temporary
 		Status:    models.StatusActive,
 		CreatedAt: time.Now(),
 		UpdatedAt: time.Now(),
 	}
 
-	if err := s.repo.Create(ctx, user); err != nil {
+	err = s.repo.Create(ctx, user)
+	if err != nil {
 		s.log.Error("[Service][Create] failed to create user", zap.Error(err))
+		return nil, ErrorCreating
+	}
+
+	user, err = s.repo.GetByEmail(ctx, user.Email)
+	if err != nil {
+		s.log.Error("[Service][Create] user doesnt exist", zap.Error(err))
 		return nil, ErrorCreating
 	}
 

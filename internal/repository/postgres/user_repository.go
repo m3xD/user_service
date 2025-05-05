@@ -27,9 +27,10 @@ var (
 
 func (r *userRepository) Create(ctx context.Context, user *models.User) error {
 	query := `
-        INSERT INTO users (id, email, password, name, role, avatar, phone, status, created_at, updated_at)
-        VALUES (:id, :email, :password, :name, :role, :avatar, :phone, :status, :created_at, :updated_at)
+        INSERT INTO users (email, password, name, role, avatar, phone, status, created_at, updated_at)
+        VALUES (:email, :password, :name, :role, :avatar, :phone, :status, :created_at, :updated_at)
     `
+
 	_, err := r.db.NamedExec(query, user)
 
 	if err != nil {
@@ -83,7 +84,7 @@ func (r *userRepository) GetByEmail(ctx context.Context, email string) (*models.
 func (r *userRepository) Update(ctx context.Context, user *models.User) error {
 	query := `
         UPDATE users
-        SET name = :name, avatar = :avatar, phone = :phone, status = :status, updated_at = :updated_at, password = :password, role = :role, email = :email, last_login = :last_login, last_activity = :last_activity
+        SET name = :name, avatar = :avatar, phone = :phone, status = :status, updated_at = :updated_at, password = :password, role = :role, email = :email
         WHERE id = :id
     `
 

@@ -24,7 +24,7 @@ type LoginRequest struct {
 type RegisterRequest struct {
 	Email    string `json:"email" validate:"required,email"`
 	Password string `json:"password" validate:"required,min=8"`
-	FullName string `json:"full_name" validate:"required"`
+	FullName string `json:"name" validate:"required"`
 	Phone    string `json:"phone" validate:"required"`
 }
 
@@ -59,20 +59,20 @@ func (r RegisterRequest) Validate() error {
 		return errors.New("full name is required")
 	}
 
-	if r.Phone == "" {
+	/*if r.Phone == "" {
 		return errors.New("phone is required")
-	}
+	}*/
 
 	return nil
 }
 
 type RefreshTokenData struct {
-	ID        string    `json:"id"`
-	UserID    string    `json:"user_id"`
-	Token     string    `json:"token"`
-	ExpiresAt time.Time `json:"expires"`
-	IssuedAt  time.Time `json:"issued"`
-	IsRevoked bool      `json:"is_revoked"`
+	ID        string    `json:"id" db:"id"`
+	UserID    string    `json:"user_id" db:"user_id"`
+	Token     string    `json:"token" db:"token"`
+	ExpiresAt time.Time `json:"expires" db:"expires_at"`
+	IssuedAt  time.Time `json:"issued" db:"issued_at"`
+	IsRevoked bool      `json:"is_revoked" db:"is_revoked"`
 }
 
 type RefreshRequest struct {

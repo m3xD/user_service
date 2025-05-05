@@ -44,6 +44,7 @@ func (a authRepository) GetByToken(ctx context.Context, token string) (*models.R
 		return nil, err
 	}
 
+	// time.Now() > refreshToken.ExpiresAt
 	if time.Now().After(refreshToken.ExpiresAt) {
 		return nil, ErrExpiredToken
 	}

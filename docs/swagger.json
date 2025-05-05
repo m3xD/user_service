@@ -1,0 +1,500 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "API for user management.",
+        "title": "User Service API",
+        "termsOfService": "http://swagger.io/terms/",
+        "contact": {
+            "name": "Bui Duy Khanh",
+            "email": "iam@m3xd.dev"
+        },
+        "license": {
+            "name": "Apache 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+        },
+        "version": "1.0"
+    },
+    "host": "auth-service-6f3ceb0b5b52.herokuapp.com",
+    "basePath": "/",
+    "paths": {
+        "/auth/login": {
+            "post": {
+                "description": "Login user with email and password",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "auth"
+                ],
+                "summary": "Login",
+                "parameters": [
+                    {
+                        "description": "Login request",
+                        "name": "login",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.LoginRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/util.Response"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/util.Response"
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found",
+                        "schema": {
+                            "$ref": "#/definitions/util.Response"
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "schema": {
+                            "$ref": "#/definitions/util.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/auth/register": {
+            "post": {
+                "description": "Register new user",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "auth"
+                ],
+                "summary": "Register",
+                "parameters": [
+                    {
+                        "description": "Register request",
+                        "name": "register",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.RegisterRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "Created",
+                        "schema": {
+                            "$ref": "#/definitions/util.Response"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/util.Response"
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "schema": {
+                            "$ref": "#/definitions/util.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/users": {
+            "post": {
+                "security": [
+                    {
+                        "JWT": []
+                    }
+                ],
+                "description": "Create a new user",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "users"
+                ],
+                "summary": "Create user",
+                "parameters": [
+                    {
+                        "description": "Create user request",
+                        "name": "create_user",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.CreateUserInput"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "Created",
+                        "schema": {
+                            "$ref": "#/definitions/util.Response"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/util.Response"
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "schema": {
+                            "$ref": "#/definitions/util.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/users/list": {
+            "get": {
+                "security": [
+                    {
+                        "JWT": []
+                    }
+                ],
+                "description": "List users",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "users"
+                ],
+                "summary": "List users",
+                "parameters": [
+                    {
+                        "type": "integer",
+                        "description": "Page number",
+                        "name": "page",
+                        "in": "query"
+                    },
+                    {
+                        "type": "integer",
+                        "description": "Page size",
+                        "name": "pageSize",
+                        "in": "query"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/util.Response"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/util.Response"
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "schema": {
+                            "$ref": "#/definitions/util.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/users/{id}": {
+            "get": {
+                "security": [
+                    {
+                        "JWT": []
+                    }
+                ],
+                "description": "Get user information",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "users"
+                ],
+                "summary": "Get user",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "User ID",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/util.Response"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/util.Response"
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found",
+                        "schema": {
+                            "$ref": "#/definitions/util.Response"
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "schema": {
+                            "$ref": "#/definitions/util.Response"
+                        }
+                    }
+                }
+            },
+            "put": {
+                "security": [
+                    {
+                        "JWT": []
+                    }
+                ],
+                "description": "Update user information",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "users"
+                ],
+                "summary": "Update user",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "User ID",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    },
+                    {
+                        "description": "Update user request",
+                        "name": "update_user",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.UpdateUserInput"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/util.Response"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/util.Response"
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "schema": {
+                            "$ref": "#/definitions/util.Response"
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "security": [
+                    {
+                        "JWT": []
+                    }
+                ],
+                "description": "Delete user",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "users"
+                ],
+                "summary": "Delete user",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "User ID",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/util.Response"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/util.Response"
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "schema": {
+                            "$ref": "#/definitions/util.Response"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "models.CreateUserInput": {
+            "type": "object",
+            "required": [
+                "email",
+                "full_name",
+                "password",
+                "phone",
+                "role"
+            ],
+            "properties": {
+                "email": {
+                    "type": "string"
+                },
+                "full_name": {
+                    "type": "string"
+                },
+                "password": {
+                    "type": "string",
+                    "minLength": 8
+                },
+                "phone": {
+                    "type": "string"
+                },
+                "role": {
+                    "type": "string",
+                    "enum": [
+                        "user",
+                        "admin"
+                    ]
+                }
+            }
+        },
+        "models.LoginRequest": {
+            "type": "object",
+            "required": [
+                "email",
+                "password"
+            ],
+            "properties": {
+                "email": {
+                    "type": "string"
+                },
+                "password": {
+                    "type": "string"
+                }
+            }
+        },
+        "models.RegisterRequest": {
+            "type": "object",
+            "required": [
+                "email",
+                "full_name",
+                "password",
+                "phone"
+            ],
+            "properties": {
+                "email": {
+                    "type": "string"
+                },
+                "full_name": {
+                    "type": "string"
+                },
+                "password": {
+                    "type": "string",
+                    "minLength": 8
+                },
+                "phone": {
+                    "type": "string"
+                }
+            }
+        },
+        "models.UpdateUserInput": {
+            "type": "object",
+            "properties": {
+                "avatar": {
+                    "type": "string"
+                },
+                "full_name": {
+                    "type": "string"
+                },
+                "phone": {
+                    "type": "string"
+                },
+                "status": {
+                    "type": "string",
+                    "enum": [
+                        "active",
+                        "inactive"
+                    ]
+                }
+            }
+        },
+        "util.Response": {
+            "type": "object",
+            "properties": {
+                "data": {},
+                "message": {
+                    "type": "string"
+                },
+                "status_code": {
+                    "type": "integer"
+                }
+            }
+        }
+    },
+    "securityDefinitions": {
+        "JWT": {
+            "description": "JWT security accessToken. Please add it in the format \"Bearer {token}\"",
+            "type": "apiKey",
+            "name": "Authorization",
+            "in": "header"
+        }
+    },
+    "externalDocs": {
+        "description": "OpenAPI",
+        "url": "https://swagger.io/resources/open-api/"
+    }
+}

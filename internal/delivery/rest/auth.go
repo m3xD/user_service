@@ -240,7 +240,7 @@ func (h *AuthHandler) Register(w http.ResponseWriter, r *http.Request) {
 		Email:    registerRequest.Email,
 		Password: registerRequest.Password,
 		FullName: registerRequest.FullName,
-		Phone:    registerRequest.Phone,
+		Phone:    "default",
 		Role:     models.RoleUser,
 	})
 

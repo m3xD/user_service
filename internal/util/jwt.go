@@ -4,6 +4,7 @@ import (
 	"github.com/golang-jwt/jwt/v5"
 	"os"
 	"time"
+	_ "time/tzdata"
 )
 
 type Jwt interface {
@@ -23,7 +24,11 @@ func NewJwtImpl() *JwtImpl {
 }
 
 func (j JwtImpl) GenerateAccessToken(userID string, role string) (string, error) {
-	expireTime := time.Now().Add(TOKEN_EXPIRED_TIME)
+	location, err := time.LoadLocation("Asia/Ho_Chi_Minh")
+	if err != nil {
+		return "", err
+	}
+	expireTime := time.Now().In(location).Local().Add(1 * time.Hour)
 	token := jwt.NewWithClaims(jwt.SigningMethodHS256, jwt.MapClaims{
 		"userID": userID,
 		"role":   role,

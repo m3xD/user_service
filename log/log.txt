@@ -2501,3 +2501,183 @@
 {"level":"INFO","ts":"2025-03-17T00:22:44.718+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10 in 4.8832ms"}
 {"level":"INFO","ts":"2025-03-17T00:22:44.722+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10 from 192.168.51.193:50949"}
 {"level":"INFO","ts":"2025-03-17T00:22:44.725+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10 in 2.6711ms"}
+{"level":"INFO","ts":"2025-03-17T09:37:09.960+0700","caller":"cmd/main.go:57","msg":"User service starting","version":"1.0.0"}
+{"level":"ERROR","ts":"2025-03-17T09:37:09.972+0700","caller":"cmd/main.go:71","msg":"Failed to ping database","error":"pq: password authentication failed for user \"postgres\""}
+{"level":"INFO","ts":"2025-03-17T09:37:40.048+0700","caller":"cmd/main.go:57","msg":"User service starting","version":"1.0.0"}
+{"level":"INFO","ts":"2025-03-17T09:37:40.069+0700","caller":"cmd/main.go:74","msg":"Successfully connected to database"}
+{"level":"INFO","ts":"2025-03-17T09:37:40.069+0700","caller":"cmd/main.go:115","msg":"Server starting","port":"8083"}
+{"level":"INFO","ts":"2025-03-17T09:41:18.065+0700","caller":"middleware/log.go:24","msg":"Started POST /auth/refresh from 10.24.5.41:53096"}
+{"level":"INFO","ts":"2025-03-17T09:41:18.065+0700","caller":"middleware/log.go:24","msg":"Started POST /auth/refresh from 10.24.5.41:53097"}
+{"level":"ERROR","ts":"2025-03-17T09:41:18.070+0700","caller":"service/auth.go:90","msg":"[AuthService][RefreshToken] failed to validate refresh token","error":"token has invalid claims: token is expired"}
+{"level":"ERROR","ts":"2025-03-17T09:41:18.070+0700","caller":"service/auth.go:90","msg":"[AuthService][RefreshToken] failed to validate refresh token","error":"token has invalid claims: token is expired"}
+{"level":"ERROR","ts":"2025-03-17T09:41:18.070+0700","caller":"rest/auth.go:312","msg":"[Handler][RefreshToken] failed to refresh token","error":"token has invalid claims: token is expired"}
+{"level":"ERROR","ts":"2025-03-17T09:41:18.070+0700","caller":"rest/auth.go:312","msg":"[Handler][RefreshToken] failed to refresh token","error":"token has invalid claims: token is expired"}
+{"level":"INFO","ts":"2025-03-17T09:41:18.071+0700","caller":"middleware/log.go:31","msg":"Completed /auth/refresh in 5.833291ms"}
+{"level":"INFO","ts":"2025-03-17T09:41:18.077+0700","caller":"middleware/log.go:31","msg":"Completed /auth/refresh in 11.504792ms"}
+{"level":"INFO","ts":"2025-03-17T09:41:18.105+0700","caller":"middleware/log.go:24","msg":"Started POST /auth/logout from 10.24.5.41:53096"}
+{"level":"INFO","ts":"2025-03-17T09:41:18.116+0700","caller":"middleware/log.go:31","msg":"Completed /auth/logout in 11.07675ms"}
+{"level":"INFO","ts":"2025-03-17T09:41:36.323+0700","caller":"middleware/log.go:24","msg":"Started POST /auth/login from 10.24.5.41:53111"}
+{"level":"INFO","ts":"2025-03-17T09:41:36.438+0700","caller":"middleware/log.go:31","msg":"Completed /auth/login in 114.838167ms"}
+{"level":"INFO","ts":"2025-03-17T09:42:00.325+0700","caller":"middleware/log.go:24","msg":"Started POST /auth/login from 10.24.5.41:53134"}
+{"level":"INFO","ts":"2025-03-17T09:42:00.447+0700","caller":"middleware/log.go:31","msg":"Completed /auth/login in 121.304541ms"}
+{"level":"INFO","ts":"2025-03-17T09:42:41.196+0700","caller":"middleware/log.go:24","msg":"Started POST /auth/logout from 10.24.5.41:53291"}
+{"level":"INFO","ts":"2025-03-17T09:42:41.217+0700","caller":"middleware/log.go:31","msg":"Completed /auth/logout in 20.960833ms"}
+{"level":"INFO","ts":"2025-03-17T09:42:47.514+0700","caller":"middleware/log.go:24","msg":"Started POST /auth/login from 10.24.5.41:53134"}
+{"level":"INFO","ts":"2025-03-17T09:42:47.611+0700","caller":"middleware/log.go:31","msg":"Completed /auth/login in 97.037458ms"}
+{"level":"INFO","ts":"2025-03-17T09:42:47.679+0700","caller":"middleware/log.go:24","msg":"Started POST /auth/logout from 10.24.5.41:53291"}
+{"level":"INFO","ts":"2025-03-17T09:42:47.682+0700","caller":"middleware/log.go:31","msg":"Completed /auth/logout in 2.521542ms"}
+{"level":"INFO","ts":"2025-03-17T09:43:11.137+0700","caller":"middleware/log.go:24","msg":"Started POST /auth/login from 10.24.5.41:53291"}
+{"level":"INFO","ts":"2025-03-17T09:43:11.219+0700","caller":"middleware/log.go:31","msg":"Completed /auth/login in 81.276458ms"}
+{"level":"INFO","ts":"2025-03-17T09:43:11.264+0700","caller":"middleware/log.go:24","msg":"Started POST /auth/logout from 10.24.5.41:53291"}
+{"level":"INFO","ts":"2025-03-17T09:43:11.267+0700","caller":"middleware/log.go:31","msg":"Completed /auth/logout in 2.917667ms"}
+{"level":"INFO","ts":"2025-03-17T09:44:56.739+0700","caller":"cmd/main.go:57","msg":"User service starting","version":"1.0.0"}
+{"level":"INFO","ts":"2025-03-17T09:44:56.752+0700","caller":"cmd/main.go:74","msg":"Successfully connected to database"}
+{"level":"INFO","ts":"2025-03-17T09:44:56.752+0700","caller":"cmd/main.go:115","msg":"Server starting","port":"8083"}
+{"level":"INFO","ts":"2025-03-17T09:45:03.331+0700","caller":"middleware/log.go:24","msg":"Started POST /auth/login from 10.24.5.41:53944"}
+{"level":"INFO","ts":"2025-03-17T09:45:03.436+0700","caller":"middleware/log.go:31","msg":"Completed /auth/login in 104.090959ms"}
+{"level":"INFO","ts":"2025-03-17T09:45:03.508+0700","caller":"middleware/log.go:24","msg":"Started POST /auth/logout from 10.24.5.41:53944"}
+{"level":"INFO","ts":"2025-03-17T09:45:03.510+0700","caller":"middleware/log.go:31","msg":"Completed /auth/logout in 1.773125ms"}
+{"level":"INFO","ts":"2025-03-17T09:45:24.511+0700","caller":"middleware/log.go:24","msg":"Started POST /auth/login from 10.24.5.41:54054"}
+{"level":"INFO","ts":"2025-03-17T09:45:24.606+0700","caller":"middleware/log.go:31","msg":"Completed /auth/login in 95.086041ms"}
+{"level":"INFO","ts":"2025-03-17T09:45:24.661+0700","caller":"middleware/log.go:24","msg":"Started POST /auth/logout from 10.24.5.41:54054"}
+{"level":"INFO","ts":"2025-03-17T09:45:24.663+0700","caller":"middleware/log.go:31","msg":"Completed /auth/logout in 2.095458ms"}
+{"level":"INFO","ts":"2025-03-17T09:45:57.042+0700","caller":"middleware/log.go:24","msg":"Started POST /auth/login from 10.24.5.41:54323"}
+{"level":"INFO","ts":"2025-03-17T09:45:57.143+0700","caller":"middleware/log.go:31","msg":"Completed /auth/login in 101.335625ms"}
+{"level":"INFO","ts":"2025-03-17T09:45:57.209+0700","caller":"middleware/log.go:24","msg":"Started POST /auth/logout from 10.24.5.41:54323"}
+{"level":"INFO","ts":"2025-03-17T09:45:57.211+0700","caller":"middleware/log.go:31","msg":"Completed /auth/logout in 1.956917ms"}
+{"level":"INFO","ts":"2025-03-17T09:46:35.541+0700","caller":"middleware/log.go:24","msg":"Started POST /auth/login from 10.24.5.41:54323"}
+{"level":"INFO","ts":"2025-03-17T09:46:35.642+0700","caller":"middleware/log.go:31","msg":"Completed /auth/login in 100.951458ms"}
+{"level":"INFO","ts":"2025-03-17T09:46:35.727+0700","caller":"middleware/log.go:24","msg":"Started POST /auth/logout from 10.24.5.41:54507"}
+{"level":"INFO","ts":"2025-03-17T09:46:35.729+0700","caller":"middleware/log.go:31","msg":"Completed /auth/logout in 2.632167ms"}
+{"level":"INFO","ts":"2025-03-17T09:46:54.760+0700","caller":"middleware/log.go:24","msg":"Started POST /auth/login from 10.24.5.41:54597"}
+{"level":"INFO","ts":"2025-03-17T09:46:54.866+0700","caller":"middleware/log.go:31","msg":"Completed /auth/login in 105.966375ms"}
+{"level":"INFO","ts":"2025-03-17T09:46:54.941+0700","caller":"middleware/log.go:24","msg":"Started POST /auth/logout from 10.24.5.41:54597"}
+{"level":"INFO","ts":"2025-03-17T09:46:54.942+0700","caller":"middleware/log.go:31","msg":"Completed /auth/logout in 1.213166ms"}
+{"level":"INFO","ts":"2025-03-17T09:47:02.343+0700","caller":"middleware/log.go:24","msg":"Started POST /auth/login from 10.24.5.41:54644"}
+{"level":"INFO","ts":"2025-03-17T09:47:02.439+0700","caller":"middleware/log.go:31","msg":"Completed /auth/login in 96.651917ms"}
+{"level":"INFO","ts":"2025-03-17T09:47:02.500+0700","caller":"middleware/log.go:24","msg":"Started POST /auth/logout from 10.24.5.41:54644"}
+{"level":"INFO","ts":"2025-03-17T09:47:02.503+0700","caller":"middleware/log.go:31","msg":"Completed /auth/logout in 2.900584ms"}
+{"level":"INFO","ts":"2025-03-17T09:48:15.345+0700","caller":"middleware/log.go:24","msg":"Started POST /auth/login from 10.24.5.41:54979"}
+{"level":"INFO","ts":"2025-03-17T09:48:15.434+0700","caller":"middleware/log.go:31","msg":"Completed /auth/login in 88.291125ms"}
+{"level":"INFO","ts":"2025-03-17T09:48:15.507+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=1 from 10.24.5.41:54979"}
+{"level":"INFO","ts":"2025-03-17T09:48:15.509+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=1 in 2.636417ms"}
+{"level":"INFO","ts":"2025-03-17T09:48:15.511+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=1 from 10.24.5.41:54979"}
+{"level":"INFO","ts":"2025-03-17T09:48:15.514+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=1 in 3.429084ms"}
+{"level":"INFO","ts":"2025-03-17T09:49:12.794+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10 from 10.24.5.41:55020"}
+{"level":"INFO","ts":"2025-03-17T09:49:12.800+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10 in 5.813291ms"}
+{"level":"INFO","ts":"2025-03-17T09:49:12.802+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10 from 10.24.5.41:55021"}
+{"level":"INFO","ts":"2025-03-17T09:49:12.805+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10 in 2.353583ms"}
+{"level":"INFO","ts":"2025-03-17T09:49:14.538+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10 from 10.24.5.41:55021"}
+{"level":"INFO","ts":"2025-03-17T09:49:14.540+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10 in 2.865042ms"}
+{"level":"INFO","ts":"2025-03-17T09:49:14.543+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10 from 10.24.5.41:55020"}
+{"level":"INFO","ts":"2025-03-17T09:49:14.545+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10 in 1.704416ms"}
+{"level":"INFO","ts":"2025-03-17T09:49:16.350+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10 from 10.24.5.41:55028"}
+{"level":"INFO","ts":"2025-03-17T09:49:16.352+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10 in 2.021458ms"}
+{"level":"INFO","ts":"2025-03-17T09:49:16.356+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10 from 10.24.5.41:55029"}
+{"level":"INFO","ts":"2025-03-17T09:49:16.357+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10 in 1.078958ms"}
+{"level":"INFO","ts":"2025-03-17T09:49:25.021+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=1 from 10.24.5.41:55020"}
+{"level":"INFO","ts":"2025-03-17T09:49:25.026+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=1 in 4.459916ms"}
+{"level":"INFO","ts":"2025-03-17T09:49:25.029+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=1 from 10.24.5.41:55021"}
+{"level":"INFO","ts":"2025-03-17T09:49:25.032+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=1 in 2.234292ms"}
+{"level":"INFO","ts":"2025-03-17T09:49:25.952+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10 from 10.24.5.41:55021"}
+{"level":"INFO","ts":"2025-03-17T09:49:25.955+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10 in 2.764291ms"}
+{"level":"INFO","ts":"2025-03-17T09:49:25.958+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10 from 10.24.5.41:55020"}
+{"level":"INFO","ts":"2025-03-17T09:49:25.960+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10 in 2.443084ms"}
+{"level":"INFO","ts":"2025-03-17T09:49:26.489+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=1 from 10.24.5.41:55021"}
+{"level":"INFO","ts":"2025-03-17T09:49:26.491+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=1 in 1.878083ms"}
+{"level":"INFO","ts":"2025-03-17T09:49:26.510+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=1 from 10.24.5.41:55020"}
+{"level":"INFO","ts":"2025-03-17T09:49:26.516+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=1 in 6.086708ms"}
+{"level":"INFO","ts":"2025-03-17T09:49:37.336+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=1 from 10.24.5.41:55028"}
+{"level":"INFO","ts":"2025-03-17T09:49:37.338+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=1 in 2.238ms"}
+{"level":"INFO","ts":"2025-03-17T09:49:37.340+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=1 from 10.24.5.41:55029"}
+{"level":"INFO","ts":"2025-03-17T09:49:37.341+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=1 in 980.958µs"}
+{"level":"INFO","ts":"2025-03-17T09:49:38.042+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10 from 10.24.5.41:55029"}
+{"level":"INFO","ts":"2025-03-17T09:49:38.044+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10 in 2.202125ms"}
+{"level":"INFO","ts":"2025-03-17T09:49:38.046+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10 from 10.24.5.41:55028"}
+{"level":"INFO","ts":"2025-03-17T09:49:38.048+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10 in 1.852084ms"}
+{"level":"INFO","ts":"2025-03-17T09:50:33.574+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=1 from 10.24.5.41:55028"}
+{"level":"INFO","ts":"2025-03-17T09:50:33.576+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=1 in 1.713791ms"}
+{"level":"INFO","ts":"2025-03-17T09:50:33.577+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=1 from 10.24.5.41:55029"}
+{"level":"INFO","ts":"2025-03-17T09:50:33.578+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=1 in 716.5µs"}
+{"level":"INFO","ts":"2025-03-17T09:50:36.869+0700","caller":"middleware/log.go:24","msg":"Started POST /auth/logout from 10.24.5.41:55082"}
+{"level":"INFO","ts":"2025-03-17T09:50:36.876+0700","caller":"middleware/log.go:31","msg":"Completed /auth/logout in 6.651375ms"}
+{"level":"INFO","ts":"2025-03-17T09:51:27.331+0700","caller":"middleware/log.go:24","msg":"Started POST /auth/login from 10.24.5.41:55029"}
+{"level":"INFO","ts":"2025-03-17T09:51:27.438+0700","caller":"middleware/log.go:31","msg":"Completed /auth/login in 107.797833ms"}
+{"level":"INFO","ts":"2025-03-17T09:51:27.499+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=1 from 10.24.5.41:55029"}
+{"level":"INFO","ts":"2025-03-17T09:51:27.501+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=1 in 2.273833ms"}
+{"level":"INFO","ts":"2025-03-17T09:51:27.505+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=1 from 10.24.5.41:55082"}
+{"level":"INFO","ts":"2025-03-17T09:51:27.508+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=1 in 2.093625ms"}
+{"level":"INFO","ts":"2025-03-17T09:51:28.669+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10 from 10.24.5.41:55029"}
+{"level":"INFO","ts":"2025-03-17T09:51:28.672+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10 in 3.222ms"}
+{"level":"INFO","ts":"2025-03-17T09:51:28.675+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10 from 10.24.5.41:55082"}
+{"level":"INFO","ts":"2025-03-17T09:51:28.677+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10 in 1.846666ms"}
+{"level":"INFO","ts":"2025-03-17T09:54:53.591+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10 from 10.24.5.41:55934"}
+{"level":"INFO","ts":"2025-03-17T09:54:53.596+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10 in 5.062708ms"}
+{"level":"INFO","ts":"2025-03-17T09:54:53.598+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10 from 10.24.5.41:55933"}
+{"level":"INFO","ts":"2025-03-17T09:54:53.599+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10 in 1.300792ms"}
+{"level":"INFO","ts":"2025-03-17T10:00:47.987+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10 from 10.24.5.41:56398"}
+{"level":"INFO","ts":"2025-03-17T10:00:47.993+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10 in 5.298583ms"}
+{"level":"INFO","ts":"2025-03-17T10:00:47.994+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=0&size=10 from 10.24.5.41:56398"}
+{"level":"INFO","ts":"2025-03-17T10:00:47.995+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=0&size=10 in 1.179708ms"}
+{"level":"INFO","ts":"2025-03-18T09:30:32.209+0700","caller":"cmd/main.go:57","msg":"User service starting","version":"1.0.0"}
+{"level":"INFO","ts":"2025-03-18T09:30:32.231+0700","caller":"cmd/main.go:74","msg":"Successfully connected to database"}
+{"level":"INFO","ts":"2025-03-18T09:30:32.231+0700","caller":"cmd/main.go:115","msg":"Server starting","port":"8083"}
+{"level":"INFO","ts":"2025-03-18T09:32:28.928+0700","caller":"middleware/log.go:24","msg":"Started POST /auth/register from [::1]:51777"}
+{"level":"ERROR","ts":"2025-03-18T09:32:28.955+0700","caller":"rest/auth.go:219","msg":"[Handler][Register] user already exists"}
+{"level":"INFO","ts":"2025-03-18T09:32:28.955+0700","caller":"middleware/log.go:31","msg":"Completed /auth/register in 26.972084ms"}
+{"level":"INFO","ts":"2025-03-18T09:32:50.661+0700","caller":"middleware/log.go:24","msg":"Started POST /auth/register from [::1]:51777"}
+{"level":"ERROR","ts":"2025-03-18T09:32:50.667+0700","caller":"service/user.go:94","msg":"[Service][GetByEmail] user not found","error":"user not found"}
+{"level":"ERROR","ts":"2025-03-18T09:32:50.748+0700","caller":"service/user.go:70","msg":"[Service][Create] failed to create user","error":"pq: invalid input syntax for type bigint: \"\""}
+{"level":"ERROR","ts":"2025-03-18T09:32:50.748+0700","caller":"rest/auth.go:248","msg":"[Handler][Register] failed to register","error":"failed to create user"}
+{"level":"INFO","ts":"2025-03-18T09:32:50.748+0700","caller":"middleware/log.go:31","msg":"Completed /auth/register in 86.443666ms"}
+{"level":"INFO","ts":"2025-03-18T09:35:34.110+0700","caller":"cmd/main.go:57","msg":"User service starting","version":"1.0.0"}
+{"level":"INFO","ts":"2025-03-18T09:35:34.130+0700","caller":"cmd/main.go:74","msg":"Successfully connected to database"}
+{"level":"INFO","ts":"2025-03-18T09:35:34.131+0700","caller":"cmd/main.go:115","msg":"Server starting","port":"8083"}
+{"level":"INFO","ts":"2025-03-18T09:35:37.964+0700","caller":"middleware/log.go:24","msg":"Started POST /auth/register from [::1]:51894"}
+{"level":"ERROR","ts":"2025-03-18T09:35:37.978+0700","caller":"service/user.go:94","msg":"[Service][GetByEmail] user not found","error":"user not found"}
+{"level":"INFO","ts":"2025-03-18T09:35:38.063+0700","caller":"middleware/log.go:31","msg":"Completed /auth/register in 98.521125ms"}
+{"level":"INFO","ts":"2025-03-21T09:27:21.026+0700","caller":"cmd/main.go:57","msg":"User service starting","version":"1.0.0"}
+{"level":"INFO","ts":"2025-03-21T09:27:21.050+0700","caller":"cmd/main.go:74","msg":"Successfully connected to database"}
+{"level":"INFO","ts":"2025-03-21T09:27:21.050+0700","caller":"cmd/main.go:115","msg":"Server starting","port":"8083"}
+{"level":"INFO","ts":"2025-03-21T09:27:31.247+0700","caller":"middleware/log.go:24","msg":"Started POST /auth/register from [::1]:64567"}
+{"level":"ERROR","ts":"2025-03-21T09:27:31.268+0700","caller":"service/user.go:94","msg":"[Service][GetByEmail] user not found","error":"user not found"}
+{"level":"INFO","ts":"2025-03-21T09:27:31.365+0700","caller":"middleware/log.go:31","msg":"Completed /auth/register in 117.54375ms"}
+{"level":"INFO","ts":"2025-03-22T20:01:16.617+0700","caller":"cmd/main.go:57","msg":"User service starting","version":"1.0.0"}
+{"level":"INFO","ts":"2025-03-22T20:01:16.637+0700","caller":"cmd/main.go:74","msg":"Successfully connected to database"}
+{"level":"INFO","ts":"2025-03-22T20:01:16.637+0700","caller":"cmd/main.go:115","msg":"Server starting","port":"8083"}
+{"level":"INFO","ts":"2025-03-22T20:01:38.141+0700","caller":"middleware/log.go:24","msg":"Started POST /auth/login from [::1]:56124"}
+{"level":"INFO","ts":"2025-03-22T20:01:38.248+0700","caller":"middleware/log.go:31","msg":"Completed /auth/login in 107.017791ms"}
+{"level":"INFO","ts":"2025-03-22T20:01:52.530+0700","caller":"middleware/log.go:24","msg":"Started GET /users?page=1&pageSize=5 from [::1]:56124"}
+{"level":"INFO","ts":"2025-03-22T20:01:52.541+0700","caller":"middleware/log.go:31","msg":"Completed /users?page=1&pageSize=5 in 11.233417ms"}
+{"level":"INFO","ts":"2025-03-22T22:40:02.965+0700","caller":"cmd/main.go:57","msg":"User service starting","version":"1.0.0"}
+{"level":"INFO","ts":"2025-03-22T22:40:02.987+0700","caller":"cmd/main.go:74","msg":"Successfully connected to database"}
+{"level":"INFO","ts":"2025-03-22T22:40:02.988+0700","caller":"cmd/main.go:115","msg":"Server starting","port":"8083"}
+{"level":"INFO","ts":"2025-03-22T22:40:10.856+0700","caller":"middleware/log.go:24","msg":"Started POST /auth/login from [::1]:59640"}
+{"level":"INFO","ts":"2025-03-22T22:40:10.969+0700","caller":"middleware/log.go:31","msg":"Completed /auth/login in 112.761541ms"}
+{"level":"INFO","ts":"2025-03-22T22:41:43.804+0700","caller":"middleware/log.go:24","msg":"Started POST /auth/refresh from [::1]:59640"}
+{"level":"ERROR","ts":"2025-03-22T22:41:43.813+0700","caller":"service/auth.go:96","msg":"[AuthService][RefreshToken] failed to get refresh token","error":"missing destination name user_id in *models.RefreshTokenData"}
+{"level":"ERROR","ts":"2025-03-22T22:41:43.813+0700","caller":"rest/auth.go:312","msg":"[Handler][RefreshToken] failed to refresh token","error":"missing destination name user_id in *models.RefreshTokenData"}
+{"level":"INFO","ts":"2025-03-22T22:41:43.813+0700","caller":"middleware/log.go:31","msg":"Completed /auth/refresh in 9.003541ms"}
+{"level":"INFO","ts":"2025-03-22T22:44:43.965+0700","caller":"cmd/main.go:57","msg":"User service starting","version":"1.0.0"}
+{"level":"INFO","ts":"2025-03-22T22:44:43.985+0700","caller":"cmd/main.go:74","msg":"Successfully connected to database"}
+{"level":"INFO","ts":"2025-03-22T22:44:43.985+0700","caller":"cmd/main.go:115","msg":"Server starting","port":"8083"}
+{"level":"INFO","ts":"2025-03-22T22:44:47.532+0700","caller":"middleware/log.go:24","msg":"Started POST /auth/refresh from [::1]:59839"}
+{"level":"INFO","ts":"2025-03-22T22:44:47.548+0700","caller":"middleware/log.go:31","msg":"Completed /auth/refresh in 15.740083ms"}
+{"level":"INFO","ts":"2025-03-24T10:30:39.321+0700","caller":"cmd/main.go:57","msg":"User service starting","version":"1.0.0"}
+{"level":"INFO","ts":"2025-03-24T10:30:39.345+0700","caller":"cmd/main.go:74","msg":"Successfully connected to database"}
+{"level":"INFO","ts":"2025-03-24T10:30:39.346+0700","caller":"cmd/main.go:115","msg":"Server starting","port":"8083"}
+{"level":"INFO","ts":"2025-03-24T10:34:15.647+0700","caller":"middleware/log.go:24","msg":"Started POST /auth/login from 10.24.5.230:59010"}
+{"level":"ERROR","ts":"2025-03-24T10:34:15.676+0700","caller":"service/user.go:176","msg":"[Service][Validate] user not found","error":"user not found"}
+{"level":"ERROR","ts":"2025-03-24T10:34:15.676+0700","caller":"rest/auth.go:107","msg":"[Handler][Login] user not found","error":"user not found"}
+{"level":"INFO","ts":"2025-03-24T10:34:15.676+0700","caller":"middleware/log.go:31","msg":"Completed /auth/login in 28.9015ms"}
+{"level":"INFO","ts":"2025-04-20T22:47:08.452+0700","caller":"cmd/main.go:57","msg":"User service starting","version":"1.0.0"}
+{"level":"ERROR","ts":"2025-04-20T22:47:08.525+0700","caller":"cmd/main.go:71","msg":"Failed to ping database","error":"pq: role \"postgres\" does not exist"}
+{"level":"INFO","ts":"2025-04-20T22:48:47.524+0700","caller":"cmd/main.go:57","msg":"User service starting","version":"1.0.0"}
+{"level":"INFO","ts":"2025-04-20T22:48:48.551+0700","caller":"cmd/main.go:74","msg":"Successfully connected to database"}
+{"level":"INFO","ts":"2025-04-20T22:48:48.553+0700","caller":"cmd/main.go:115","msg":"Server starting","port":"8080"}
+{"level":"INFO","ts":"2025-04-20T22:49:02.056+0700","caller":"middleware/log.go:24","msg":"Started GET /health from [::1]:53714"}
+{"level":"INFO","ts":"2025-04-20T22:49:02.056+0700","caller":"middleware/log.go:31","msg":"Completed /health in 552.75µs"}
+{"level":"INFO","ts":"2025-04-21T18:37:14.135+0700","caller":"user_service/main.go:57","msg":"User service starting","version":"1.0.0"}
+{"level":"ERROR","ts":"2025-04-21T18:37:14.141+0700","caller":"user_service/main.go:71","msg":"Failed to ping database","error":"dial tcp [::1]:5432: connect: connection refused"}
+{"level":"INFO","ts":"2025-04-21T18:40:17.771+0700","caller":"user_service/main.go:57","msg":"User service starting","version":"1.0.0"}
+{"level":"ERROR","ts":"2025-04-21T18:40:17.775+0700","caller":"user_service/main.go:71","msg":"Failed to ping database","error":"dial tcp [::1]:5432: connect: connection refused"}

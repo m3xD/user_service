@@ -1,0 +1,328 @@
+basePath: /
+definitions:
+  models.CreateUserInput:
+    properties:
+      email:
+        type: string
+      full_name:
+        type: string
+      password:
+        minLength: 8
+        type: string
+      phone:
+        type: string
+      role:
+        enum:
+        - user
+        - admin
+        type: string
+    required:
+    - email
+    - full_name
+    - password
+    - phone
+    - role
+    type: object
+  models.LoginRequest:
+    properties:
+      email:
+        type: string
+      password:
+        type: string
+    required:
+    - email
+    - password
+    type: object
+  models.RegisterRequest:
+    properties:
+      email:
+        type: string
+      full_name:
+        type: string
+      password:
+        minLength: 8
+        type: string
+      phone:
+        type: string
+    required:
+    - email
+    - full_name
+    - password
+    - phone
+    type: object
+  models.UpdateUserInput:
+    properties:
+      avatar:
+        type: string
+      full_name:
+        type: string
+      phone:
+        type: string
+      status:
+        enum:
+        - active
+        - inactive
+        type: string
+    type: object
+  util.Response:
+    properties:
+      data: {}
+      message:
+        type: string
+      status_code:
+        type: integer
+    type: object
+externalDocs:
+  description: OpenAPI
+  url: https://swagger.io/resources/open-api/
+host: auth-service-6f3ceb0b5b52.herokuapp.com
+info:
+  contact:
+    email: iam@m3xd.dev
+    name: Bui Duy Khanh
+  description: API for user management.
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  termsOfService: http://swagger.io/terms/
+  title: User Service API
+  version: "1.0"
+paths:
+  /auth/login:
+    post:
+      consumes:
+      - application/json
+      description: Login user with email and password
+      parameters:
+      - description: Login request
+        in: body
+        name: login
+        required: true
+        schema:
+          $ref: '#/definitions/models.LoginRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/util.Response'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/util.Response'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/util.Response'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/util.Response'
+      summary: Login
+      tags:
+      - auth
+  /auth/register:
+    post:
+      consumes:
+      - application/json
+      description: Register new user
+      parameters:
+      - description: Register request
+        in: body
+        name: register
+        required: true
+        schema:
+          $ref: '#/definitions/models.RegisterRequest'
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: Created
+          schema:
+            $ref: '#/definitions/util.Response'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/util.Response'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/util.Response'
+      summary: Register
+      tags:
+      - auth
+  /users:
+    post:
+      consumes:
+      - application/json
+      description: Create a new user
+      parameters:
+      - description: Create user request
+        in: body
+        name: create_user
+        required: true
+        schema:
+          $ref: '#/definitions/models.CreateUserInput'
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: Created
+          schema:
+            $ref: '#/definitions/util.Response'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/util.Response'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/util.Response'
+      security:
+      - JWT: []
+      summary: Create user
+      tags:
+      - users
+  /users/{id}:
+    delete:
+      consumes:
+      - application/json
+      description: Delete user
+      parameters:
+      - description: User ID
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/util.Response'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/util.Response'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/util.Response'
+      security:
+      - JWT: []
+      summary: Delete user
+      tags:
+      - users
+    get:
+      consumes:
+      - application/json
+      description: Get user information
+      parameters:
+      - description: User ID
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/util.Response'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/util.Response'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/util.Response'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/util.Response'
+      security:
+      - JWT: []
+      summary: Get user
+      tags:
+      - users
+    put:
+      consumes:
+      - application/json
+      description: Update user information
+      parameters:
+      - description: User ID
+        in: path
+        name: id
+        required: true
+        type: string
+      - description: Update user request
+        in: body
+        name: update_user
+        required: true
+        schema:
+          $ref: '#/definitions/models.UpdateUserInput'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/util.Response'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/util.Response'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/util.Response'
+      security:
+      - JWT: []
+      summary: Update user
+      tags:
+      - users
+  /users/list:
+    get:
+      consumes:
+      - application/json
+      description: List users
+      parameters:
+      - description: Page number
+        in: query
+        name: page
+        type: integer
+      - description: Page size
+        in: query
+        name: pageSize
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/util.Response'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/util.Response'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/util.Response'
+      security:
+      - JWT: []
+      summary: List users
+      tags:
+      - users
+securityDefinitions:
+  JWT:
+    description: JWT security accessToken. Please add it in the format "Bearer {token}"
+    in: header
+    name: Authorization
+    type: apiKey
+swagger: "2.0"

@@ -24,6 +24,10 @@ func NewUserHandler(userService service.UserService, log *zap.Logger, authMiddle
 }
 
 func (h *UserHandler) RegisterRoutes(r *mux.Router) {
+	r.HandleFunc("/health", func(w http.ResponseWriter, r *http.Request) {
+		w.WriteHeader(http.StatusOK)
+		w.Write([]byte("Welcome to the User Service!"))
+	})
 	r = r.PathPrefix("/users").Subrouter()
 	r.Use(h.authMiddleware.AuthMiddleware())
 	r.Use(h.authMiddleware.OwnerMiddleware())

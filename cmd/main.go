@@ -57,7 +57,7 @@ func main() {
 	logger.Info("User service starting", zap.String("version", "1.0.0"))
 
 	// Connect to database
-	dbURL := getEnv("DATABASE_URL", "postgres://postgres:changeme@localhost:5432/secure_assessment?sslmode=disable")
+	dbURL := getEnv("DATABASE_URL", "postgresql://doadmin:AVNS_H8f93_ABVbXw2uoKUIa@db-postgresql-sgp1-41428-do-user-21115414-0.m.db.ondigitalocean.com:25060/defaultdb?sslmode=require")
 
 	db, err := sqlx.Open("postgres", dbURL)
 	if err != nil {
@@ -87,7 +87,7 @@ func main() {
 	// Initialize auth middleware
 	authMiddleware := middleware.NewAuthMiddleware(jwtService)
 
-	port := getEnv("PORT", "8083")
+	port := getEnv("PORT", "8080")
 
 	// route to docs
 	// link, _ := strings.CutSuffix(getEnv("SYS_URL", ""), "/api")

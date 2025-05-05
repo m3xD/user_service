@@ -75,13 +75,14 @@ func main() {
 
 	// Initialize repositories
 	userRepo := postgres.NewUserRepository(db)
+	authRepo := postgres.NewAuthRepository(db)
 
 	// jwt service
 	jwtService := util.NewJwtImpl()
 
 	// Initialize services
 	userService := service.NewUserService(userRepo, logger)
-	authService := service.NewAuthService(userRepo, jwtService, logger)
+	authService := service.NewAuthService(userRepo, jwtService, logger, authRepo)
 
 	// Initialize auth middleware
 	authMiddleware := middleware.NewAuthMiddleware(jwtService)
